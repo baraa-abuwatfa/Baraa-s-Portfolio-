@@ -52,10 +52,10 @@ The projects demonstrate my progression from understanding real-world work to de
 
 | Unit | Capability | Projects | Status |
 |---|---|---|---|
-| U1 | Process & Data Thinking | 2 Projects | ⬜ |
-| U2 | AI-Powered Solution Building | 2 Projects | ⬜ |
-| U3 | Quality Thinking | 2 Projects | ⬜ |
-| U4 | Knowledge Grounding | 2 Projects | ⬜ |
+| U1 | Process & Data Thinking | 2 Projects | ✅ |
+| U2 | AI-Powered Solution Building | 2 Projects | ✅ |
+| U3 | Quality Thinking | 2 Projects | ✅ |
+| U4 | Knowledge Grounding | 2 Projects | ✅ |
 | U5 | Agent & Decision Thinking | 2 Projects | ⬜ |
 | U6 | Integration Thinking | 2 Projects | ⬜ |
 | U7 | Reliability Thinking | 2 Projects | ⬜ |
@@ -67,17 +67,8 @@ The projects demonstrate my progression from understanding real-world work to de
 
 > My strongest projects will be highlighted here after completing the course.
 
-### ⭐ Project 01 — Task Delay Alert System
-
+### ⭐ Project 01 — 
 **What it solves:**  
-بناء نظام أتمتة يستخدم الأدوات المناسبة لمساعدة الشركة على:
-تسجيل المهام ومواعيد تسليمها في جدول مركزي.
-فحص حالة المهام ومواعيد التسليم بصورة دورية.
-اكتشاف المهام التي تجاوزت موعد التسليم ولم تُستكمل.
-إرسال تنبيه إلى الموظف المسؤول عن المهمة المتأخرة.
-إرسال إشعار إلى مدير الفريق عند اكتمال المهمة.
-تسجيل حالة إرسال التنبيهات لتقليل الرسائل المكررة.
-تسهيل متابعة المهام وتقليل الاعتماد على المراجعة اليدوية.
 
 **Tools:**  
 Zapier
@@ -416,14 +407,14 @@ Future projects, experiments, and AI-powered solutions will be added here as I c
 
 | Area | Progress |
 |---|---|
-| Process & Data | ⬜ |
-| System Building | ⬜ |
-| Quality | ⬜ |
-| Knowledge | ⬜ |
-| Agency | ⬜ |
-| Integration | ⬜ |
-| Reliability | ⬜ |
-| Solution Engineering | ⬜ |
+| Process & Data | ✅|
+| System Building | ✅ |
+| Quality | ✅|
+| Knowledge | ✅ |
+| Agency | ✅ |
+| Integration | ✅ |
+| Reliability | ✅|
+| Solution Engineering | ✅ |
 
 ---
 
