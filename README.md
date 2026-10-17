@@ -120,7 +120,7 @@ I learned how to understand real-world work, decompose processes, identify input
 
 ### Projects
 
-#### 01 — [Course Project Name]
+#### 01 — AI Client Intake & Request Routing System
 
 **Type:** Guided Project
 
