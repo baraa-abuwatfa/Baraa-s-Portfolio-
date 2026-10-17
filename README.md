@@ -171,13 +171,13 @@ I learned how to test AI-powered systems, identify failures, evaluate outputs, a
 
 **Type:** Guided Project
 
-🔗 [View Project](./03-prove-it-works/course-project)
+🔗 [View Project]https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/02-System%20Thinking/Course-Project
 
 #### 02 —  Dental Files — Dental Patient Records Management System
 
 **Type:** Independent Project
 
-🔗 [View Project](./03-prove-it-works/independent-project)
+🔗 [View Project]https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/02-System%20Thinking/Independent-Project
 
 ---
 
@@ -195,13 +195,13 @@ I learned how AI systems can work with external knowledge and how to design solu
 
 **Type:** Guided Project
 
-🔗 [View Project](./04-ground-its-knowledge/course-project)
+🔗 [View Project]https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/03-Evaluation%20%26%20Diagnostic%20Thinking/Course-Project
 
 #### 02 — [Independent Project Name]
 
 **Type:** Independent Project
 
-🔗 [View Project](./04-ground-its-knowledge/independent-project)
+🔗 [View Project]https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/03-Evaluation%20%26%20Diagnostic%20Thinking/Independent-Project
 
 ---
 
