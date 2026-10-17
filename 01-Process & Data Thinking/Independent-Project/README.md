@@ -352,9 +352,7 @@ If I continued developing this project, I would:
 
 ## 🔗 Project Links
 
-**Live Demo:** [Add link if available]
-
-**Workflow:** 
+**Workflow:** https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/a7656a90aab5b92de9cf948487cca498c1eb5f9e/01-Process%20%26%20Data%20Thinking/Independent-Project/Screenshots
 
 **Repository:**(https://github.com/baraa-abuwatfa/Automation-Projects-WAC/tree/efb77510430823b377382dea80962f2026a0f820/Project1)
 
