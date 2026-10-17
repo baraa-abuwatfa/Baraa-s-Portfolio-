@@ -124,14 +124,13 @@ I learned how to understand real-world work, decompose processes, identify input
 
 **Type:** Guided Project
 
-🔗 [View Project](./01-process-and-data/course-project)
+🔗  https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/2c163bd13dc1840ad1bf3fd07bc78187b6a6ef0e/01-Process%20%26%20Data%20Thinking/Course-Project
 
 #### 02 — Task Delay Alert System
 
 **Type:** Independent project
 
-🔗 [View Project](./01-process-and-data/independent-project)
-
+🔗 [View Project]https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/2c163bd13dc1840ad1bf3fd07bc78187b6a6ef0e/01-Process%20%26%20Data%20Thinking/Independent-Project
 ---
 
 ## U2 — BUILD THE SYSTEM
