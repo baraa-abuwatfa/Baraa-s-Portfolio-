@@ -126,9 +126,9 @@ I learned how to understand real-world work, decompose processes, identify input
 
 🔗 [View Project](./01-process-and-data/course-project)
 
-#### 02 — [Independent Project Name]
+#### 02 — Task Delay Alert System
 
-**Type:** Independent Project
+**Type:** Independent project
 
 🔗 [View Project](./01-process-and-data/independent-project)
 
@@ -144,13 +144,13 @@ I learned how to transform a problem into a system and use AI-powered tools to d
 
 ### Projects
 
-#### 01 — [Course Project Name]
+#### 01 —SkillBridge Lite
 
 **Type:** Guided Project
 
 🔗 [View Project](./02-build-the-system/course-project)
 
-#### 02 — [Independent Project Name]
+#### 02 — Baraa Portfolio
 
 **Type:** Independent Project
 
@@ -168,13 +168,13 @@ I learned how to test AI-powered systems, identify failures, evaluate outputs, a
 
 ### Projects
 
-#### 01 — [Course Project Name]
+#### 01 — TaskBridge
 
 **Type:** Guided Project
 
 🔗 [View Project](./03-prove-it-works/course-project)
 
-#### 02 — [Independent Project Name]
+#### 02 —  Dental Files — Dental Patient Records Management System
 
 **Type:** Independent Project
 
@@ -192,7 +192,7 @@ I learned how AI systems can work with external knowledge and how to design solu
 
 ### Projects
 
-#### 01 — AI Knowledge Assistant
+#### 01 — TECHFIX — AI Computer Troubleshooting Assistant
 
 **Type:** Guided Project
 
