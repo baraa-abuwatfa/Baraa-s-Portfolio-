@@ -8,9 +8,9 @@
 
 ## 👩‍💻 About Me
 
-Hi, I'm **[Your Name]**.
+Hi, I'm Baraa Mahmoud Abu Watfa 
 
-I am a **[Your Professional Title]** interested in building AI-powered solutions that solve real-world problems and create meaningful impact.
+I am a Bara Abu Watfa interested in building AI-powered solutions that solve real-world problems and create meaningful impact.
 
 Through this portfolio, I document the systems and solutions I design and build throughout my AI Automation journey.
 
@@ -25,10 +25,10 @@ Through this portfolio, I document the systems and solutions I design and build 
 
 ### Connect With Me
 
-- 💼 LinkedIn: [Your LinkedIn]
-- 🌐 Portfolio: [Your Portfolio]
-- 📧 Email: [Your Email]
-- 🐙 GitHub: [Your GitHub]
+- 💼 LinkedIn: www.linkedin.com/in/baraa-abuwatfa
+- 🌐 Portfolio: https://baraas-folio-spark.lovable.app
+- 📧 Email: abuwatfabaraa@gmail.com 
+- 🐙 GitHub: https://github.com/baraa-abuwatfa
 
 ---
 
@@ -67,18 +67,23 @@ The projects demonstrate my progression from understanding real-world work to de
 
 > My strongest projects will be highlighted here after completing the course.
 
-### ⭐ Project 01 — [Project Name]
+### ⭐ Project 01 — Task Delay Alert System
 
 **What it solves:**  
-[Short description]
+بناء نظام أتمتة يستخدم الأدوات المناسبة لمساعدة الشركة على:
+تسجيل المهام ومواعيد تسليمها في جدول مركزي.
+فحص حالة المهام ومواعيد التسليم بصورة دورية.
+اكتشاف المهام التي تجاوزت موعد التسليم ولم تُستكمل.
+إرسال تنبيه إلى الموظف المسؤول عن المهمة المتأخرة.
+إرسال إشعار إلى مدير الفريق عند اكتمال المهمة.
+تسجيل حالة إرسال التنبيهات لتقليل الرسائل المكررة.
+تسهيل متابعة المهام وتقليل الاعتماد على المراجعة اليدوية.
 
 **Tools:**  
-[Tools]
+Zapier
 
-**My role:**  
-[What I designed/built]
 
-🔗 [View Project](./path-to-project)
+🔗 
 
 ---
 
