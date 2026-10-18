@@ -339,7 +339,7 @@ Project Links
 
 - 🔗 Live Application: https://udify.app/chat/GiqiSZ9HgDxviKim
 - 📚 Knowledge Base: 
----
+https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/9b97a4f1fc2770e38359355055c4e5ea8df64247/04-Grounding%20Thinking/Independent%20Project/Knowledge%20base
 
 🌟 Conclusion
 
