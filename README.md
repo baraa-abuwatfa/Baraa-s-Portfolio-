@@ -376,4 +376,4 @@ Baraa Mahmoud Abu Watfa
 
 AI Automation | AI-Powered Solutions | Human-Centered Innovation
 
-[ www.linkedin.com/in/baraa-abuwatfa] · [ https://github.com/baraa-abuwatfa] · [ https://baraas-folio-spark.lovable.app]
+[Linkedin]( www.linkedin.com/in/baraa-abuwatfa) · [ Github ](https://github.com/baraa-abuwatfa) · [Portfolio]( https://baraas-folio-spark.lovable.app)
