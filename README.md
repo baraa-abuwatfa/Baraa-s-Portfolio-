@@ -56,10 +56,10 @@ The projects demonstrate my progression from understanding real-world work to de
 | U2 | AI-Powered Solution Building | 2 Projects | ✅ |
 | U3 | Quality Thinking | 2 Projects | ✅ |
 | U4 | Knowledge Grounding | 2 Projects | ✅ |
-| U5 | Agent & Decision Thinking | 2 Projects | ⬜ |
-| U6 | Integration Thinking | 2 Projects | ⬜ |
-| U7 | Reliability Thinking | 2 Projects | ⬜ |
-| U8 | Solution Engineering | 2 Projects | ⬜ |
+| U5 | Agent & Decision Thinking | 2 Projects | ✅ |
+| U6 | Integration Thinking | 2 Projects | ✅ |
+| U7 | Reliability Thinking | 2 Projects | ✅ |
+| U8 | Solution Engineering | 2 Projects | ✅ |
 
 ---
 
