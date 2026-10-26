@@ -31,34 +31,32 @@
 - **Evidence-Based Evaluation:** توثيق الأدلة التي تدعم تقييم النظام.
 
 ---
-
 ## 🛠️ Projects
 
 ### 01 — Guided Project
 
-**Project:** [Course Project Name]
+**Project:** AskBridge — Turn Unclear Requests into Clear, Actionable Plans
 
-أختبر حلًا عمليًا باستخدام حالات اختبار محددة، وأوثق النتائج وأحدد جوانب التحسين.
+A web application that helps users transform work requests and personal goals into organized plans with clear tasks, priorities, and progress tracking.
 
-- **System Under Test:** [النظام الذي يجري اختباره]
-- **Testing Focus:** [ما الذي أختبره]
-- **Tools:** [الأدوات المستخدمة]
+- **Problem:** Freelancers, recent graduates, and early-career professionals may struggle to break down goals into manageable tasks, set priorities, and track progress.
+- **Solution:** Designed a planning application that allows users to create and manage plans, organize tasks, assign priorities and statuses, set deadlines, and track progress through a persistent database with authentication and access control.
+- **Tools:** Web Development Technologies, Database, Authentication, AI and Automation Tools (if used in the implementation).
 
-[Explore the Project]([./course-project/](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/5a5033c32ab08646662628b07a751bd93cb3459c/03-Evaluation%20%26%20Diagnostic%20Thinking/Course-Project))
+[Explore the Project](./01-process-data-thinking/course-project)
 
 ### 02 — Independent Project
 
-**Project:** [Independent Project Name]
+**Project:** Dental Files — Dental Patient Records Management System
 
-أطبق منهجية الاختبار على حل مستقل، وأوثق حالات النجاح والفشل والتحسينات التي أجريتها.
+A bilingual web application that helps dental clinics organize patient records, manage medical and dental history, and access patient information efficiently.
 
-- **System Under Test:** [النظام]
-- **Testing Focus:** [محور الاختبار]
-- **Tools:** [الأدوات المستخدمة]
+- **Problem:** Manual patient record management can make it difficult to find patient information, review medical history, and maintain consistent records.
+- **Solution:** Designed a responsive patient records system with patient search, record management, archiving and restoration, authenticated access, Arabic and English interfaces, and PDF report generation.
+- **Tools:** Lovable, Supabase (Authentication and Database), GitHub, PDF Generation.
 
-[Explore the Project]([./independent-project/](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/5a5033c32ab08646662628b07a751bd93cb3459c/03-Evaluation%20%26%20Diagnostic%20Thinking/Independent-Project))
+[Explore the Project](./01-process-data-thinking/independent-project)
 
----
 
 ## 🔍 Engineering Focus
 
