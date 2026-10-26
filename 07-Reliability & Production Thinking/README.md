@@ -39,18 +39,27 @@
 
 ### 01 — Guided Project
 
-**Project:** PlanCraft AI — Build, Connect, Automate
+**Project:** RAG with n8n — Build a Knowledge Pipeline & RAG AI Agent
 
-An AI-powered project planning application that transforms project ideas into structured action plans by connecting a web application, a database, and an AI automation workflow.
+A knowledge-based AI system that processes documents, stores their content as vector embeddings, retrieves relevant information, and generates answers grounded in a specialized knowledge base.
 
-- **Problem:** Users may struggle to turn project ideas into organized goals, implementation stages, tasks, timelines, and risk mitigation strategies.
-- **Solution:** Built an integrated application that receives project details, sends requests to an AI automation workflow, generates structured project plans, stores the data in a database, and displays the results to users.
-- **Tools:** Lovable, Supabase, n8n, AI Agent, HTTP Requests, JSON.
+- **Problem:** AI models may not have access to private or domain-specific documents, making it difficult to answer questions accurately and increasing the risk of unsupported responses.
+- **Solution:** Built a RAG system with two connected workflows: a knowledge ingestion pipeline that processes documents from Google Drive and stores embeddings in Supabase, and an AI Agent that retrieves relevant information to answer user questions using Gemini, a vector search tool, and conversational memory.
+- **Tools:** n8n, Google Drive, Supabase, PostgreSQL, pgvector, OpenAI Embeddings (`text-embedding-3-small`), Google Gemini, Simple Memory.
 
-[Explore the Project](./06-connect-it-to-the-world/course-project)
+[Explore the Project](./05-control-its-agency/course-project)
 
+### 02 — Independent Project
 
----
+**Project:** QA Knowledge Assistant — Knowledge-Based Software Testing Assistant
+
+An AI-powered assistant that helps users understand software testing concepts, classify reported issues, and prepare structured QA documentation using trusted reference materials.
+
+- **Problem:** Beginner QA engineers and software testing students may struggle to apply testing concepts consistently, prepare test cases, and distinguish bugs from feature requests or improvements. General AI assistants may also provide unsupported answers when evidence is missing.
+- **Solution:** Designed a knowledge-based assistant using Dify and RAG to retrieve information from QA reference documents and provide evidence-based guidance for software testing, issue classification, and QA documentation.
+- **Tools:** Dify, Knowledge Base, Retrieval-Augmented Generation (RAG), Large Language Model (LLM).
+
+[Explore the Project](./05-control-its-agency/independent-project)
 
 ## 🔍 Engineering Focus
 
