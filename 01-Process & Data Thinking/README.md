@@ -33,29 +33,31 @@
 
 ## 🛠️ Projects
 
+## 🛠️ Projects
+
 ### 01 — Guided Project
 
-**Project:** [Course Project Name]
+**Project:** AI Client Intake & Request Routing System
 
-مشروع عملي أطبّق فيه مفاهيم تحليل العمل وتصميم عملية أتمتة تعتمد على AI.
+An AI-powered automation system that organizes client requests, checks information completeness, and routes requests to the appropriate next step.
 
-- **Problem:** [المشكلة التي يعالجها المشروع]
-- **Solution:** [وصف مختصر للحل]
-- **Tools:** [الأدوات المستخدمة]
+- **Problem:** Manually reviewing and organizing client requests takes time and can lead to missing information, processing delays, and inconsistent handling.
+- **Solution:** Designed an automated intake process that receives client requests through an online form, extracts and organizes information using AI, checks completeness, applies rule-based routing, records results, and flags cases requiring human review.
+- **Tools:** Zapier, AI tools, Online Forms, Google Sheets.
 
-[Explore the Project](./course-project/)
+[Explore the Project](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/blob/main/01-Process%20%26%20Data%20Thinking/course-project)
 
 ### 02 — Independent Project
 
-**Project:** [Independent Project Name]
+**Project:** Task Delay Alert System
 
-مشروع مستقل أطبّق فيه ما تعلمته على مشكلة مختلفة، مع تصميم الحل وتنفيذه وتوثيق النتائج.
+A rule-based automation system that monitors task deadlines and statuses, sends email notifications, and tracks notification records using Google Sheets and Zapier.
 
-- **Problem:** [المشكلة التي يعالجها المشروع]
-- **Solution:** [وصف مختصر للحل]
-- **Tools:** [الأدوات المستخدمة]
+- **Problem:** Manually monitoring task deadlines and completion statuses can cause missed alerts, delayed follow-ups, and additional work for project managers and team members.
+- **Solution:** Designed an automated workflow that checks task records on a schedule, identifies overdue or completed tasks, sends the appropriate email notifications, and updates notification fields after successful delivery.
+- **Tools:** Zapier, Google Sheets, Email Automation.
 
-[Explore the Project](./independent-project/)
+[Explore the Project](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/blob/main/01-Process%20%26%20Data%20Thinking/independent-project)
 
 ---
 
