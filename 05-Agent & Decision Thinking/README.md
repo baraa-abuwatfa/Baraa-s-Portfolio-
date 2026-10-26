@@ -31,32 +31,32 @@
 
 ---
 
+
 ## 🛠️ Projects
 
 ### 01 — Guided Project
 
-**Project:** [Course Project Name]
+**Project:** XYZ Real Estate AI Agent
 
-مشروع عملي أطبّق فيه مفاهيم تصميم AI Agents والتحكم في استقلاليتها.
+An AI-powered real estate lead qualification system that collects, validates, and organizes customer requirements through Telegram, using controlled AI decision-making and workflow automation.
 
-- **Problem:** [المشكلة التي يعالجها المشروع]
-- **Solution:** [وصف مختصر للحل]
-- **Tools:** [الأدوات المستخدمة]
+- **Problem:** Real estate companies may face incomplete customer information, repeated questions, inconsistent records, and the risk of saving information without customer confirmation.
+- **Solution:** Built an AI agent that collects customer requirements through Telegram, maintains conversation context, identifies missing information, applies business rules, validates required fields, requests confirmation before saving, and verifies the result after storing confirmed leads.
+- **Tools:** n8n, Telegram, OpenRouter, Simple Memory, Google Sheets.
 
-[Explore the Project](#)
+[Explore the Project](./05-control-its-agency/course-project)
 
 ### 02 — Independent Project
 
-**Project:** [Independent Project Name]
+**Project:** Chaos to Action — AI-Powered Task Organizer and Execution Assistant
 
-مشروع مستقل أطبّق فيه تصميم Agent يختار الإجراءات المناسبة، ويلتزم بالحدود المحددة، ويتحقق من النتائج.
+An AI-powered task management assistant that transforms unorganized messages and pending tasks into structured priorities and actionable execution plans.
 
-- **Problem:** [المشكلة التي يعالجها المشروع]
-- **Solution:** [وصف مختصر للحل]
-- **Tools:** [الأدوات المستخدمة]
+- **Problem:** People may struggle to organize tasks, identify priorities, track deadlines, and decide what action to take next.
+- **Solution:** Built an AI-powered workflow that extracts tasks from Telegram messages, organizes them by priority, deadline, and status, generates execution steps, and stores structured task information in Google Sheets.
+- **Tools:** n8n, Telegram, AI Agent, Google Sheets, Code Node.
 
-[Explore the Project](#)
-
+[Explore the Project](./05-control-its-agency/independent-project)
 ---
 
 ## 🔍 Engineering Focus
