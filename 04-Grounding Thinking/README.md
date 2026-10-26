@@ -32,48 +32,6 @@
 - **Handle Missing Knowledge:** تصميم سلوك مناسب عندما تكون المعلومات غير متوفرة أو غير كافية.
 - **Improve System Performance:** تحليل الأخطاء وإجراء تجارب مضبوطة وتحسين النظام مع الحفاظ على جودة النتائج.
 
----
-
-## 🛠️ Projects
-
-### 01 — Guided Project
-
-**Project:** TECHFIX — AI Computer Troubleshooting Assistant
-
-مشروع عملي أطبّق فيه مفاهيم بناء نظام ذكاء اصطناعي يعتمد على قاعدة معرفة محددة، بحيث يسترجع المعلومات ذات الصلة ويستخدمها للإجابة عن أسئلة المستخدمين.
-
-- **Problem:** معقدة أو غير مناسبة لحالتهم.
-
-من أمثلة هذه المشكلات:
-
-بطء الحاسوب.
-امتلاء مساحة التخزين.
-تعذّر الاتصال بشبكة Wi-Fi أو الإنترنت.
-الحاجة إلى إرشادات تقنية واضحة ومراعية للسلامة.
-يسعى TECHFIX إلى تسهيل الوصول إلى المعرفة التقنية وتقديمها بطريقة تساعد المستخدم على فهم المشكلة والبدء بخطوات مناسبة للتعامل معها.
-- **Solution:** لا يهدف TECHFIX إلى تقديم إجابة عن كل سؤال، بل إلى تقديم إرشادات تستند إلى المعلومات المتاحة، وطلب تفاصيل إضافية عند الحاجة، والتصريح بعدم كفاية المعرفة عندما لا تتوفر معلومات مناسبة.
-
-يمثل المشروع تطبيقًا عمليًا لبناء مساعد ذكي يعتمد على المعرفة المنظمة، مع الاهتمام بجودة الاسترجاع، ودقة الإجابات، وحدود المساعدة.
-
-
-- **Tools:** [الأدوات المستخدمة، مثل Dify]
-
-[Explore the Project](./course-project)
-
-### 02 — Independent Project
-
-**Project:** [Independent Project Name]
-
-مشروع مستقل أطبّق فيه ما تعلمته لبناء مساعد ذكي متخصص في مجال محدد، مع التركيز على جودة مصادر المعرفة، ودقة الاسترجاع، والإجابات المدعومة بالأدلة.
-
-- **Problem:** [المشكلة التي يعالجها المشروع]
-- **Solution:** [وصف مختصر للحل]
-- **Knowledge Sources:** [مصادر المعرفة المستخدمة]
-- **Tools:** [الأدوات المستخدمة]
-
-[Explore the Project](./independent-project)
-
----
 
 ## 🔍 Engineering Focus
 
@@ -116,9 +74,7 @@
 
 ## 🔗 Related Projects
 
-- [Guided Project](./course-project)
-- [Independent Project](./independent-project)
+- [Guided Project](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/7e926b3b9853431ae149e617f2ec8fb3f9a45ced/04-Grounding%20Thinking/course%20project)
+- [Independent Project]([./independent-project](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/7e926b3b9853431ae149e617f2ec8fb3f9a45ced/04-Grounding%20Thinking/Independent%20Project))
 
 ---
-
-**Next:** U5 — [Next Unit Name]
