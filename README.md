@@ -90,13 +90,13 @@ I learned how to understand real-world work, decompose processes, identify input
 
 **Type:** Guided Project
 
-🔗  https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/2c163bd13dc1840ad1bf3fd07bc78187b6a6ef0e/01-Process%20%26%20Data%20Thinking/Course-Project
+🔗  [ AI Client Intake & Request Routing System]( https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/2c163bd13dc1840ad1bf3fd07bc78187b6a6ef0e/01-Process%20%26%20Data%20Thinking/Course-Project)
 
 #### 02 — Task Delay Alert System
 
 **Type:** Independent project
 
-🔗 [View Project]https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/2c163bd13dc1840ad1bf3fd07bc78187b6a6ef0e/01-Process%20%26%20Data%20Thinking/Independent-Project
+🔗 [Task Delay Alert SystemView Project] ( https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/2c163bd13dc1840ad1bf3fd07bc78187b6a6ef0e/01-Process%20%26%20Data%20Thinking/Independent-Project)
 ---
 
 ## U2 — BUILD THE SYSTEM
@@ -113,13 +113,13 @@ I learned how to transform a problem into a system and use AI-powered tools to d
 
 **Type:** Guided Project
 
-🔗https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/02-System%20Thinking/Course-Project
+🔗 [SkillBridge Lite]( https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/02-System%20Thinking/Course-Project)
 
 #### 02 — Baraa Portfolio
 
 **Type:** Independent Project
 
-🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/02-System%20Thinking/Independent-Project
+🔗 [ Baraa Portfolio]( https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/02-System%20Thinking/Independent-Project)
 
 ---
 
@@ -137,13 +137,13 @@ I learned how to test AI-powered systems, identify failures, evaluate outputs, a
 
 **Type:** Guided Project
 
-🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/02-System%20Thinking/Course-Project
+🔗 [TaskBridge]( https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/02-System%20Thinking/Course-Project)
 
 #### 02 —  Dental Files — Dental Patient Records Management System
 
 **Type:** Independent Project
 
-🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/02-System%20Thinking/Independent-Project
+🔗 [ Dental Files] ( https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/02-System%20Thinking/Independent-Project )
 
 ---
 
@@ -161,13 +161,13 @@ I learned how AI systems can work with external knowledge and how to design solu
 
 **Type:** Guided Project
 
-🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/03-Evaluation%20%26%20Diagnostic%20Thinking/Course-Project
+🔗 [TECHFIX] ( https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/03-Evaluation%20%26%20Diagnostic%20Thinking/Course-Project )
 
 #### 02 — QA Knowledge Assistant
 
 **Type:** Independent Project
 
-🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/04-Grounding%20Thinking/Independent%20Project
+🔗 [ QA Knowledge Assistant] (https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/04-Grounding%20Thinking/Independent%20Project)
 
 ## U5 — CONTROL ITS AGENCY
 
@@ -183,13 +183,13 @@ I learned when an Agent is appropriate, how AI can make decisions, and how to ke
 
 **Type:** Guided Project
 
-🔗[ ](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/05-Agent%20%26%20Decision%20Thinking/Course%20Project%20)
+🔗[XYZ Real Estate AI Agent](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/05-Agent%20%26%20Decision%20Thinking/Course%20Project%20)
 
 #### 02 — Chaos to Action 
 
 **Type:** Independent Project
 
-🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/05-Agent%20%26%20Decision%20Thinking/Independant%20Project%20
+🔗 [Chaos to Action ] (https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/05-Agent%20%26%20Decision%20Thinking/Independant%20Project%20)
 
 ---
 
@@ -207,7 +207,7 @@ I learned how AI-powered systems communicate with external applications, service
 
 **Type:** Guided Project
 
-🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/06-Automation%20%26%20Integration%20Thinking/Course%20Project%20
+🔗[PlanCraft AI] (https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/06-Automation%20%26%20Integration%20Thinking/Course%20Project%20)
 
 
 ---
@@ -226,7 +226,7 @@ I learned how to design AI-powered systems that handle errors, unexpected inputs
 
 **Type:** Guided Project
 
-🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/07-Reliability%20%26%20Production%20Thinking/Course%20Project
+🔗 [Build a Knowledge Pipeline & RAG AI Agent] (https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/07-Reliability%20%26%20Production%20Thinking/Course%20Project)
 
 ---
 
@@ -246,11 +246,6 @@ I learned how to choose the right solution for a real-world problem by consideri
 
 🔗 [View Project](./08-engineer-the-right-solution/course-project)
 
-#### 02 — [Independent Project Name]
-
-**Type:** Independent Project
-
-🔗 [View Project](./08-engineer-the-right-solution/independent-project)
 
 ---
 
