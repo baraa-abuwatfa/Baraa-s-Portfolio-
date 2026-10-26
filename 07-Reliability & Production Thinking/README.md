@@ -39,39 +39,16 @@
 
 ### 01 — Guided Project
 
-**Project: RAG Knowledge Support System**
+**Project:** PlanCraft AI — Build, Connect, Automate
 
-نظام لدعم الإجابة عن الأسئلة باستخدام قاعدة معرفة، مع التركيز على فهم مراحل إدخال المستندات واسترجاع المعلومات وتوليد الإجابات والتحقق من جودتها.
+An AI-powered project planning application that transforms project ideas into structured action plans by connecting a web application, a database, and an AI automation workflow.
 
-- **Problem:** الحاجة إلى إجابات تستند إلى معلومات موجودة في مستندات محددة، مع التعامل الصحيح مع نقص المعلومات وفشل الاسترجاع.
-- **Solution:** تصميم مسار لإدخال المستندات وتجهيزها وتخزينها في قاعدة معرفة، ثم استرجاع المقاطع ذات الصلة واستخدامها في توليد الإجابات وتقييم النتائج.
-- **Tools:** n8n, Supabase, Gemini, OpenAI Embeddings.
+- **Problem:** Users may struggle to turn project ideas into organized goals, implementation stages, tasks, timelines, and risk mitigation strategies.
+- **Solution:** Built an integrated application that receives project details, sends requests to an AI automation workflow, generates structured project plans, stores the data in a database, and displays the results to users.
+- **Tools:** Lovable, Supabase, n8n, AI Agent, HTTP Requests, JSON.
 
-**Engineering Focus:**
-- Knowledge Ingestion & Document Processing.
-- Chunking, Embeddings & Vector Search.
-- Retrieval Quality & Answer Validation.
-- Testing, Failure Handling & Root Cause Analysis.
+[Explore the Project](./06-connect-it-to-the-world/course-project)
 
-[Explore the Project](#)
-
-### 02 — Independent Project
-
-**Project: [Independent Project Name]**
-
-مشروع مستقل أطبّق فيه مبادئ هندسة الحلول المعتمدة على الذكاء الاصطناعي، بدءًا من تحليل المشكلة واختيار المعمارية المناسبة، وصولًا إلى اختبار النظام وتحسين موثوقيته وتوثيق القرارات الهندسية.
-
-- **Problem:** [المشكلة التي يعالجها المشروع].
-- **Solution:** [وصف مختصر للحل والمعمارية المختارة].
-- **Tools:** [الأدوات المستخدمة].
-
-**Engineering Focus:**
-- Requirements & Architecture Selection.
-- Testing & Output Validation.
-- Error Handling & Reliability.
-- Security, Documentation & Maintainability.
-
-[Explore the Project](#)
 
 ---
 
