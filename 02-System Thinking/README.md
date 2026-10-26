@@ -34,30 +34,27 @@
 
 ### 01 — Guided Project
 
-**Project:** [Course Project Name]
+**Project:** SkillBridge Lite — AI-Powered Career Fit Assistant
 
-تطبيق عملي أبني فيه حلًا باستخدام AI App Builder، انطلاقًا من مشكلة ومتطلبات واضحة.
+An AI-powered web application that compares a user's professional profile with a selected career opportunity and identifies relevant skills, potential gaps, and recommended next steps.
 
-- **Problem:** [المشكلة]
-- **Target Users:** [المستخدمون المستهدفون]
-- **Solution:** [الحل]
-- **Tools:** [الأدوات المستخدمة]
+- **Problem:** Students, recent graduates, and early-career professionals may struggle to understand how their skills, projects, and experience match specific career opportunities.
+- **Solution:** Designed an application that allows users to manage their professional profiles, explore three predefined career opportunities, analyze profile-to-opportunity fit, and receive recommendations for improving their career readiness.
+- **Tools:** AI tools, Web Application Technologies.
 
-[Explore the Project](./course-project/)
+[Explore the Project](./01-process-data-thinking/course-project)
 
 ### 02 — Independent Project
 
-**Project:** [Independent Project Name]
+**Project:** Baraa Portfolio — Interactive Personal Portfolio with an AI-Powered Assistant
 
-تطبيق مستقل أحوّل فيه فكرة إلى تطبيق له مستخدمون ووظائف وتدفق استخدام واضح.
+An interactive personal portfolio website that showcases professional skills, experience, and projects while helping visitors discover information through an AI-powered chatbot.
 
-- **Problem:** [المشكلة]
-- **Target Users:** [المستخدمون المستهدفون]
-- **Solution:** [الحل]
-- **Tools:** [الأدوات المستخدمة]
+- **Problem:** Recruiters, hiring managers, and potential freelance clients may find it difficult to explore professional experience, understand project details, and identify relevant skills through a traditional CV.
+- **Solution:** Designed a responsive portfolio website that organizes professional information, skills, experience, and projects, with interactive navigation and an AI-powered chatbot that helps visitors find relevant information and contact options.
+- **Tools:** Web Development Technologies, AI Chatbot Integration.
 
-[Explore the Project](./independent-project/)
-
+[Explore the Project](./01-process-data-thinking/independent-project)
 ---
 
 ## 🔍 Engineering Focus
