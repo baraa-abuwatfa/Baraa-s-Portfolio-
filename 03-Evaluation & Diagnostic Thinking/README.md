@@ -44,7 +44,7 @@
 - **Testing Focus:** [ما الذي أختبره]
 - **Tools:** [الأدوات المستخدمة]
 
-[Explore the Project](./course-project/)
+[Explore the Project]([./course-project/](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/5a5033c32ab08646662628b07a751bd93cb3459c/03-Evaluation%20%26%20Diagnostic%20Thinking/Course-Project))
 
 ### 02 — Independent Project
 
@@ -56,7 +56,7 @@
 - **Testing Focus:** [محور الاختبار]
 - **Tools:** [الأدوات المستخدمة]
 
-[Explore the Project](./independent-project/)
+[Explore the Project]([./independent-project/](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/5a5033c32ab08646662628b07a751bd93cb3459c/03-Evaluation%20%26%20Diagnostic%20Thinking/Independent-Project))
 
 ---
 
@@ -93,8 +93,8 @@
 
 ## 🔗 Related Projects
 
-- [Guided Project](./course-project/)
-- [Independent Project](./independent-project/)
+- [Guided Project](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/5a5033c32ab08646662628b07a751bd93cb3459c/03-Evaluation%20%26%20Diagnostic%20Thinking/Course-Project)
+- [Independent Project]([./independent-project/](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/5a5033c32ab08646662628b07a751bd93cb3459c/03-Evaluation%20%26%20Diagnostic%20Thinking/Independent-Project))
 
 ---
 
