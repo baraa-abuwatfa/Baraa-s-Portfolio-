@@ -74,40 +74,6 @@ The projects demonstrate my progression from understanding real-world work to de
 Zapier
 
 
-🔗 
-
----
-
-### ⭐ Project 02 — [Project Name]
-
-**What it solves:**  
-[Short description]
-
-**Tools:**  
-[Tools]
-
-**My role:**  
-[What I designed/built]
-
-🔗 [View Project](./path-to-project)
-
----
-
-### ⭐ Project 03 — [Project Name]
-
-**What it solves:**  
-[Short description]
-
-**Tools:**  
-[Tools]
-
-**My role:**  
-[What I designed/built]
-
-🔗 [View Project](./path-to-project)
-
----
-
 # 🧩 My Projects
 
 ## U1 — UNDERSTAND THE WORK
@@ -147,13 +113,13 @@ I learned how to transform a problem into a system and use AI-powered tools to d
 
 **Type:** Guided Project
 
-🔗 [View Project](./02-build-the-system/course-project)
+🔗https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/02-System%20Thinking/Course-Project
 
 #### 02 — Baraa Portfolio
 
 **Type:** Independent Project
 
-🔗 [View Project](./02-build-the-system/independent-project)
+🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/02-System%20Thinking/Independent-Project
 
 ---
 
@@ -171,13 +137,13 @@ I learned how to test AI-powered systems, identify failures, evaluate outputs, a
 
 **Type:** Guided Project
 
-🔗 [View Project]https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/02-System%20Thinking/Course-Project
+🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/02-System%20Thinking/Course-Project
 
 #### 02 —  Dental Files — Dental Patient Records Management System
 
 **Type:** Independent Project
 
-🔗 [View Project]https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/02-System%20Thinking/Independent-Project
+🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/02-System%20Thinking/Independent-Project
 
 ---
 
@@ -195,15 +161,13 @@ I learned how AI systems can work with external knowledge and how to design solu
 
 **Type:** Guided Project
 
-🔗 [View Project]https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/03-Evaluation%20%26%20Diagnostic%20Thinking/Course-Project
+🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/03-Evaluation%20%26%20Diagnostic%20Thinking/Course-Project
 
-#### 02 — [Independent Project Name]
+#### 02 — QA Knowledge Assistant
 
 **Type:** Independent Project
 
-🔗 [View Project]https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/279b1727d8a5349b1b09704fce0087931c20f335/03-Evaluation%20%26%20Diagnostic%20Thinking/Independent-Project
-
----
+🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/04-Grounding%20Thinking/Independent%20Project
 
 ## U5 — CONTROL ITS AGENCY
 
@@ -215,17 +179,17 @@ I learned when an Agent is appropriate, how AI can make decisions, and how to ke
 
 ### Projects
 
-#### 01 — [Course Project Name]
+#### 01 —XYZ Real Estate AI Agent
 
 **Type:** Guided Project
 
-🔗 [View Project](./05-control-its-agency/course-project)
+🔗[ ](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/05-Agent%20%26%20Decision%20Thinking/Course%20Project%20)
 
-#### 02 — [Independent Project Name]
+#### 02 — Chaos to Action 
 
 **Type:** Independent Project
 
-🔗 [View Project](./05-control-its-agency/independent-project)
+🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/05-Agent%20%26%20Decision%20Thinking/Independant%20Project%20
 
 ---
 
@@ -239,17 +203,12 @@ I learned how AI-powered systems communicate with external applications, service
 
 ### Projects
 
-#### 01 — [Course Project Name]
+#### 01 — PlanCraft AI — Build, Connect, Automate
 
 **Type:** Guided Project
 
-🔗 [View Project](./06-connect-it-to-the-world/course-project)
+🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/06-Automation%20%26%20Integration%20Thinking/Course%20Project%20
 
-#### 02 — [Independent Project Name]
-
-**Type:** Independent Project
-
-🔗 [View Project](./06-connect-it-to-the-world/independent-project)
 
 ---
 
@@ -263,17 +222,11 @@ I learned how to design AI-powered systems that handle errors, unexpected inputs
 
 ### Projects
 
-#### 01 — [Course Project Name]
+#### 01 — Build a Knowledge Pipeline & RAG AI Agent
 
 **Type:** Guided Project
 
-🔗 [View Project](./07-make-it-reliable/course-project)
-
-#### 02 — [Independent Project Name]
-
-**Type:** Independent Project
-
-🔗 [View Project](./07-make-it-reliable/independent-project)
+🔗 https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/47761f7e9013508448be8c2c80249d97c6d92392/07-Reliability%20%26%20Production%20Thinking/Course%20Project
 
 ---
 
@@ -329,8 +282,6 @@ Tools and technologies I worked with throughout the course:
 ### Other Tools
 
 - GitHub
-- [Add your tools]
-
 ---
 
 # 📈 My Learning Journey
@@ -426,9 +377,8 @@ The projects are presented as documented engineering work, including the problem
 ---
 
 ## 👩‍💻 Author
-
-**[Your Name]**
+Baraa Mahmoud Abu Watfa 
 
 AI Automation | AI-Powered Solutions | Human-Centered Innovation
 
-[LinkedIn] · [GitHub] · [Portfolio]
+[ www.linkedin.com/in/baraa-abuwatfa] · [ https://github.com/baraa-abuwatfa] · [ https://baraas-folio-spark.lovable.app]
