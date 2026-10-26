@@ -93,8 +93,8 @@
 
 ## 🔗 Related Projects
 
-- [Guided Project](#)
-- [Independent Project](#)
+- [Guided Project](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/195e0c68b96ae5855704f90f16467b8ea7da4e9b/05-Agent%20%26%20Decision%20Thinking/Course%20Project%20)
+- [Independent Project](https://github.com/baraa-abuwatfa/Baraa-s-Portfolio-/tree/195e0c68b96ae5855704f90f16467b8ea7da4e9b/05-Agent%20%26%20Decision%20Thinking/Independant%20Project%20)
 
 ---
 
