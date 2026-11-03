@@ -249,4 +249,4 @@ Helping businesses move beyond tracking numbers toward understanding their finan
 
 ---
 
-Developed as an AI-powered solution engineering project | 2026
+<sub>Developed as an AI-powered solution engineering project | 2026</sub>
