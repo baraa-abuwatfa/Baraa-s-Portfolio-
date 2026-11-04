@@ -85,7 +85,7 @@ The workflow retrieves the latest monthly report for the configured company. Rep
 ## 5. Prototype Access
 
 - **Application:** AI CFO
-- **Demo link:** [Add your deployed application URL here]
+- **Demo link:** [AI CFO Live Demo](https://dual-language-finance-fluent.lovable.app)
 - **Repository:** [Add the repository URL here]
 
 ## 6. Screenshots & Evidence
