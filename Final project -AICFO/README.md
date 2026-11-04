@@ -1,64 +1,48 @@
-💼 AI CFO
+💼 AI CFO – Intelligent Financial Management Platform
 
-AI-Powered Financial Intelligence Platform
+«Turning Financial Data into Intelligent Decisions.»
 
-«Understand your numbers. Discover insights. Make smarter financial decisions.»
+📌 Project Overview
 
----
+AI CFO is an intelligent financial management platform designed to help small businesses and company owners understand their financial performance, monitor transactions, identify unusual expenses, and make more informed business decisions.
 
-1. 🚀 Project Overview
+The platform combines financial data management, interactive dashboards, financial intelligence, reporting, and AI-assisted conversations in one system.
 
-AI CFO is an AI-powered financial intelligence platform designed to help small business owners and entrepreneurs understand, monitor, and analyze their financial performance.
+🎯 Problem Statement
 
-The platform transforms financial transaction data into meaningful insights through financial dashboards, intelligent analysis, unusual expense detection, and data-driven recommendations.
+Many small businesses manage their financial information without having a clear and timely understanding of their financial performance.
 
-Instead of simply displaying financial numbers, AI CFO helps users understand what those numbers mean and identify areas that may require attention.
+Common challenges include:
 
-🎯 Project Goal:
-To make financial analysis more accessible and support better business decision-making through AI-powered insights.
+- Difficulty tracking income and expenses.
+- Limited visibility into profitability and cash flow.
+- Time-consuming financial analysis.
+- Difficulty identifying unusual expenses.
+- Challenges turning financial data into actionable decisions.
 
----
+💡 Proposed Solution
 
-2. 🎯 Problem & Target Users
+AI CFO provides a centralized platform that transforms financial records into understandable financial insights.
 
-🔴 The Problem
+It helps users move beyond simply recording transactions by presenting financial indicators, analyzing trends, highlighting potential issues, and providing AI-assisted explanations and recommendations.
 
-Many small businesses manage their financial information without having access to advanced financial analysis tools or dedicated financial expertise.
+✨ Key Features
 
-As a result, business owners may face challenges such as:
+1. 🔐 Authentication and Company Management
 
-- Difficulty understanding overall financial performance.
-- Limited visibility into revenue, expenses, and profitability.
-- Spending patterns that are difficult to identify manually.
-- Unusual expenses that may go unnoticed.
-- Difficulty comparing financial performance across different periods.
-- Lack of clear, actionable insights to support decisions.
+- User registration and login.
+- Company setup and management.
+- Company membership.
+- Role-based access for different company members.
 
-👥 Target Users
+Supported roles:
 
-User Type| Description
-Small Business Owners| Monitor financial performance and make business decisions.
-Entrepreneurs| Understand business income, expenses, and profitability.
-Finance Managers| Analyze transactions and review financial reports.
-Administrators| Manage company financial information and user access.
+- Owner
+- Admin
+- Finance Manager
+- Viewer
 
-🔐 User Roles
-
-AI CFO supports company-based access management with the following roles:
-
-Role| Main Responsibility
-Owner| Full company access and management.
-Admin| Administrative access based on permissions.
-Finance Manager| Manage and analyze financial data.
-Viewer| View financial information without modifying it.
-
----
-
-3. 💡 Proposed Solution & Key Features
-
-AI CFO provides an integrated financial workspace that combines financial management with AI-powered intelligence.
-
-📊 3.1 Financial Dashboard
+2. 📊 Financial Dashboard
 
 Provides an overview of the company's financial performance through key indicators:
 
@@ -66,187 +50,178 @@ Provides an overview of the company's financial performance through key indicato
 - Total Expenses
 - Net Profit
 - Cash Flow
+- Financial charts
+- Recent transactions
 
-💳 3.2 Transaction Management
+3. 💳 Transaction Management
 
 Allows authorized users to manage financial transactions.
 
-Key capabilities:
+- Add income and expense records.
+- Edit and delete transactions.
+- Search transactions.
+- Filter by transaction type, category, and date.
+- View transaction details.
 
-- Add, edit, and delete transactions.
-- Record income and expenses.
-- Assign categories and dates.
-- Search and filter transactions.
-- Review financial transaction history.
+4. 🧠 Financial Intelligence
 
-🧠 3.3 Financial Intelligence
+Analyzes financial data to help users understand business performance.
 
-The AI-powered analysis feature helps users understand financial data and identify important patterns.
+- Revenue and expense analysis.
+- Net profit analysis.
+- Financial trend analysis.
+- Period comparisons.
+- Expense category analysis.
+- Unusual expense detection.
+- Financial alerts.
+- AI-assisted recommendations.
 
-Key capabilities:
+5. 📄 Financial Reports
 
-- Analyze revenue and expense trends.
-- Compare financial performance across periods.
-- Identify unusual expenses.
-- Analyze expense categories.
-- Generate data-based financial recommendations.
+Provides monthly and annual financial summaries.
 
-📑 3.4 Financial Reports
+- Revenue summary.
+- Expense summary.
+- Net profit.
+- Profit margin.
+- Monthly financial breakdown.
+- Financial charts.
+- PDF report export.
 
-Provides structured financial reports to help users review business performance.
+6. 🤖 AI Financial Assistant
 
-Key capabilities:
+An AI-assisted interface that helps users ask questions about their company's financial information using natural language.
 
-- Monthly financial summaries.
-- Annual financial summaries.
-- Revenue, expense, and net profit analysis.
-- Financial indicators and visual charts.
+Example questions:
 
-✨ Core Value
+- How much did we spend this month?
+- What is our net profit?
+- Why did our expenses increase?
+- What is our highest expense category?
 
-Traditional Financial Tracking| AI CFO
-Displays financial numbers.| Helps interpret financial performance.
-Requires manual analysis.| Supports AI-powered financial analysis.
-Makes patterns harder to identify.| Highlights trends and unusual expenses.
-Provides limited decision support.| Offers data-based recommendations.
+The assistant is intended to make financial information easier to understand and support informed decision-making.
 
----
-
-4. 🛠️ Technology Stack
-
-The project uses modern technologies to build an integrated financial intelligence platform.
+⚙️ Technology Stack
 
 Technology| Purpose
-Lovable| AI-assisted application development and user interface creation.
-Supabase| Database, authentication, and company-based access management.
-AI Integration| Financial data analysis, unusual expense detection, and recommendations.
-n8n Cloud| Planned workflow automation for future development.
+Lovable| Application development and user interface
+Supabase| Database, authentication, and access control
+PostgreSQL| Relational database
+AI Integration| Financial explanations and AI-assisted analysis
+n8n Cloud| Planned workflow automation
 
-🏗️ High-Level Architecture
+«The exact AI provider and model are not specified in this documentation.»
 
-flowchart TD
-    A["👤 User"] --> B["💻 AI CFO Interface"]
-    B --> C["🔐 Supabase Authentication"]
-    C --> D["🏢 Company & Role Management"]
-    B --> E["💳 Financial Transactions"]
-    E --> F["🗄️ Supabase Database"]
-    F --> G["🧠 AI Financial Intelligence"]
-    G --> H["📊 Financial Dashboard"]
-    G --> I["📑 Financial Reports"]
-    G --> J["💡 Insights & Recommendations"]
-    N["⚙️ n8n Cloud"] -. "Planned Future Integration" .-> I
-    N -. "Planned Future Integration" .-> J
+🏗️ System Architecture
 
-«Note: n8n Cloud is part of the planned development roadmap. The two proposed automation workflows have not yet been implemented.»
+AI CFO follows a connected application architecture:
 
----
+1. Users access the platform through the web interface.
+2. Authentication identifies the user.
+3. Company membership and roles determine access permissions.
+4. Financial records are stored and managed through the database.
+5. Dashboard and reporting features present financial information.
+6. Financial Intelligence and the AI Assistant help interpret available data.
+7. Planned n8n workflows are intended to support recurring report delivery and unusual expense notifications.
 
-5. ⚙️ How It Works
+For more details, see:
 
-AI CFO follows a simple workflow that transforms financial records into useful business insights.
+- "02_Technical_Solution/SYSTEM_ARCHITECTURE.md"
+- "02_Technical_Solution/WORKING_PROTOTYPE.md"
 
-🔄 Main Workflow
+🧪 Testing
 
-flowchart TD
-    A["👤 User Login"] --> B["🏢 Select or Set Up Company"]
-    B --> C["💳 Add or Manage Transactions"]
-    C --> D["🗄️ Store Financial Data"]
-    D --> E["🧠 Analyze Financial Data"]
-    E --> F["📊 View Dashboard & Reports"]
-    E --> G["🚨 Identify Unusual Expenses"]
-    E --> H["💡 Generate Recommendations"]
-    G --> I["👤 User Reviews Findings"]
-    H --> I
-    I --> J["🎯 Make Informed Decisions"]
+The project testing documentation includes:
 
-📌 Workflow Explanation
+- 60 functional test scenarios reported as passed.
+- 30 automated authentication and navigation test executions reported as passed.
+- 58 automated invoice test executions reported as passed.
 
-1. Access: The user signs in to the platform.
-2. Company Setup: The user creates or accesses a company according to their permissions.
-3. Data Entry: Authorized users add and manage financial transactions.
-4. Data Processing: Financial records are stored and organized.
-5. AI Analysis: The platform analyzes financial information to identify trends, unusual expenses, and potential areas of concern.
-6. Insights: Users review dashboards, reports, and AI-generated recommendations.
-7. Decision-Making: Business owners use the insights to support their financial decisions.
+The functional scenarios cover authentication, company management, dashboard, transactions, financial intelligence, reports, and the AI Assistant.
 
-«AI CFO supports decision-making; final financial decisions remain with the business owner or authorized user.»
+See:
 
----
+- "05_Testing/TEST_CASES.md"
+- "05_Testing/TESTING_EVIDENCE.md"
+- "05_Testing/IMPROVEMENT_EXAMPLE.md"
 
-6. 🚪 Setup or Access Instructions
+«Functional scenarios and automated test executions are documented separately.»
 
-AI CFO is a web-based application prototype.
+🔄 Planned Automation Workflows
 
-🌐 Access
+Two n8n Cloud workflows are planned for the platform:
 
-- Demo Link: [Add your deployed application URL here]
-- Repository: [Add your GitHub repository URL here]
+Workflow| Purpose
+Monthly Financial Report| Retrieve the monthly financial report and email it to the company owner
+Unusual Expense Alert| Check an unusual expense and notify the company owner by email or Telegram
 
-📝 Getting Started
+Status: Planned. These workflows are not presented as completed or deployed features.
 
-1. Open the application using the demo link.
-2. Create an account or sign in.
-3. Set up a company if you do not already belong to one.
-4. Access the financial dashboard.
-5. Add financial transactions.
-6. Explore Financial Intelligence and Financial Reports.
+🎨 Visual Identity
 
-🔑 Account Requirements
+The platform uses a professional visual direction based on:
 
-- A valid user account is required.
-- Company access and available actions depend on the assigned user role.
-- Financial analysis requires available transaction data.
+- Navy
+- Steel Blue
+- White
+- Beige
 
-«Important: The application is a project prototype. Access to the deployed version depends on its current hosting and configuration.»
+The design aims to provide a clear, modern, and user-friendly financial management experience.
 
----
+📂 Repository Structure
 
-7. 🎬 Demo Link
+AI-CFO/
+│
+├── 01_Project_Definition/
+│   ├── PROJECT_DEFINITION.md
+│   └── CLIENT_PROPOSAL.md
+│
+├── 02_Technical_Solution/
+│   ├── WORKING_PROTOTYPE.md
+│   ├── SYSTEM_ARCHITECTURE.md
+│   └── screenshots/
+│
+├── 03_Content/
+│   ├── MINI_BRAND_BRIEF.md
+│   ├── MAIN_CONTENT.md
+│   └── SUPPORTING_CONTENT.md
+│
+├── 04_Prompt_Engineering/
+│   ├── PROMPTS.md
+│   └── PROMPT_IMPROVEMENT_EXAMPLE.md
+│
+├── 05_Testing/
+│   ├── TEST_CASES.md
+│   ├── TESTING_EVIDENCE.md
+│   └── IMPROVEMENT_EXAMPLE.md
+│
+├── 06_Documentation/
+│   ├── README.md
+│   └── FINAL_REPORT.md
+│
+└── README.md
 
-Explore the AI CFO prototype:
+«Adjust filenames and folder names to match the actual repository. The root "README.md" should contain this project's main introduction.»
 
-🔗 Live Demo: [Insert Application URL]
+🚀 Demo and Access
 
-🎥 Video Demonstration: [Insert Video URL]
+- Live Demo: [Add the application URL]
+- Video Demo: [Add the demonstration video URL]
+- GitHub Repository: [Add the repository URL]
 
-📂 GitHub Repository: [Insert Repository URL]
+⚠️ Limitations and Future Improvements
 
-Links will be added once the final deployment and demonstration materials are ready.
+Potential future improvements include:
 
----
+- Implementing and deploying the two planned n8n workflows.
+- Expanding financial analysis and reporting capabilities.
+- Improving AI response evaluation and validation.
+- Adding more testing evidence and deployment documentation.
 
-8. ⚠️ Known Limitations
+AI-generated financial insights should be reviewed by the user and should not replace professional accounting or financial advice.
 
-The current prototype demonstrates the main financial management and intelligence features, but some capabilities remain outside the implemented scope.
+👩‍💻 Project Credits
 
-Current Limitations
+Prepared by: Baraa Mahmoud Abu Watfa
 
-- AI recommendations depend on the quality and availability of financial transaction data.
-- AI-generated insights should be reviewed by users before making financial decisions.
-- The prototype is not a replacement for professional accounting or financial advice.
-- Results may be limited when transaction records are incomplete or insufficient.
-- Availability of the application depends on the deployed environment and connected services.
-
-🚧 Planned Future Development
-
-The following automation workflows are planned but have not yet been implemented:
-
-Planned Feature| Description| Status
-📧 Monthly Financial Report| Automatically send the monthly financial report to the company owner via email.| Planned
-🚨 Unusual Expense Alert| Notify the company owner when an unusual expense is detected via email or Telegram.| Planned
-
-🔮 Future Vision
-
-The future direction of AI CFO is to develop a more connected financial intelligence system that reduces manual follow-up, improves financial visibility, and helps business owners make informed decisions.
-
----
-
-💙 Project Mission
-
-AI CFO — Turning Financial Data into Intelligent Decisions.
-
-Helping businesses move beyond tracking numbers toward understanding their financial performance and making smarter decisions.
-
----
-
-<sub>Developed as an AI-powered solution engineering project | 2026</sub>
+Project: AI CFO – Intelligent Financial Management Platform
