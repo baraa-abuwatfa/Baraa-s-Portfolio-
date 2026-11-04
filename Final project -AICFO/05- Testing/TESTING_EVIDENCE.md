@@ -1,138 +1,66 @@
-🧪 Testing Evidence – AI CFO
+# 🧪 AI CFO — Testing Evidence
 
-1. Testing Overview
+## 1. Application Testing Summary
 
-Testing was performed to evaluate the functionality, reliability, and consistency of the AI CFO platform.
+The existing project records functional tests for the core application modules and separate automated test executions. These figures are retained as previously documented project results; this file does not extend them to the new Telegram workflow.
 
-The testing process covered the main application modules, including authentication, company management, financial dashboard, transaction management, financial intelligence, financial reports, and AI Financial Assistant.
+| Testing Area | Recorded cases / executions | Previously recorded status |
+|---|---:|---|
+| Authentication & Navigation | 6 functional cases | Passed |
+| Company Management | 6 functional cases | Passed |
+| Financial Dashboard | 8 functional cases | Passed |
+| Transaction Management | 10 functional cases | Passed |
+| Financial Intelligence | 10 functional cases | Passed |
+| Financial Reports | 10 functional cases | Passed |
+| AI Financial Assistant | 10 functional cases | Passed |
+| Total functional scenarios | 60 | Passed |
+| Automated Authentication tests | 30 executions | Passed |
+| Automated Invoice tests | 58 executions | Passed |
+| Total automated executions | 88 | Passed |
 
-2. Testing Summary
+The functional scenarios and automated execution counts are separate records.
 
-Testing Area| Test Cases / Results| Status
-Authentication & Navigation| 6 functional cases| Passed
-Company Management| 6 functional cases| Passed
-Financial Dashboard| 8 functional cases| Passed
-Transaction Management| 10 functional cases| Passed
-Financial Intelligence| 10 functional cases| Passed
-Financial Reports| 10 functional cases| Passed
-AI Financial Assistant| 10 functional cases| Passed
-Total Functional Test Cases| 60| Passed
-Automated Authentication Tests| 30 executions| Passed
-Automated Invoice Tests| 58 executions| Passed
-Total Automated Test Executions| 88| Passed
+## 2. Monthly Telegram Automation Evidence
 
-«Note: The 60 functional test cases and 88 automated test executions are reported separately because they represent different testing records.»
+| Check | Evidence/status |
+|---|---|
+| Application generates and archives monthly report PDF in Supabase | Successful, as reported for the project |
+| Report metadata retrieval from Supabase | Previously successful |
+| n8n Cloud workflow implementation/configuration | Implemented and configured |
+| End-to-end delivery of an actual PDF to Telegram | **Pending verification**; no successful delivery is claimed yet |
 
-3. Testing Evidence by Module
+The n8n workflow is configured for a monthly trigger on day 2 at 09:00 in `Asia/Gaza`, with a Manual Test Trigger available. It retrieves report metadata from `report_files`, reads `storage_path`, downloads the PDF from the private `financial-reports` bucket, validates the binary, prepares an Arabic notification, and sends the document using the Telegram Bot API.
 
-3.1 Authentication & Navigation
+The application generates and archives the PDF when a user exports a monthly report. n8n does not generate it.
 
-- User registration.
-- User login and logout.
-- Invalid login handling.
-- Protected page access.
-- Authentication-based navigation.
+## 3. Manual End-to-End Test Procedure
 
-Result: Passed.
+Use the Manual Test Trigger and a non-sensitive test report. Record the date, workflow execution reference, configured test company (without exposing sensitive identifiers), and evidence only after each step is observed.
 
-3.2 Company Management
+1. Confirm a monthly PDF has been exported by the application and archived in Supabase Storage.
+2. Confirm a matching metadata record exists in `report_files` and its `storage_path` points to the expected object in the private `financial-reports` bucket.
+3. Run the workflow using Manual Test Trigger.
+4. Confirm the latest report lookup returns the intended company/report metadata.
+5. Confirm the binary download succeeds and the file is a valid PDF.
+6. Confirm the Telegram Bot API step succeeds.
+7. Verify the actual PDF arrives and opens in the configured Telegram chat.
+8. Record the observed result. Mark end-to-end delivery passed only after step 7 succeeds.
 
-- Company creation.
-- Company information management.
-- Company membership.
-- Company context selection.
-- Role-based access.
+## 4. Automation Test Record
 
-Result: Passed.
+| Test ID | Scenario | Expected result | Actual result / evidence | Status |
+|---|---|---|---|---|
+| AUTO-01 | Supabase metadata lookup | Latest report for configured company is returned from `report_files`. | Previously successful; attach execution evidence if available. | Previously successful |
+| AUTO-02 | Private-storage PDF retrieval | PDF is downloaded using `storage_path` from `financial-reports`. | To be recorded for an identified execution. | Not recorded here |
+| AUTO-03 | PDF binary validation | Invalid or absent binary stops the send path. | To be tested/recorded. | Not recorded here |
+| AUTO-04 | Telegram document delivery | Actual PDF arrives and opens in configured chat with Arabic notification. | End-to-end receipt not yet verified. | Pending verification |
+| AUTO-05 | Missing report | Workflow does not attempt to send a missing/stale report. | To be tested/recorded. | Not recorded here |
+| AUTO-06 | Telegram/Supabase failure | Failed delivery/retrieval is visible and not reported as success. | To be tested/recorded. | Not recorded here |
 
-3.3 Financial Dashboard
+## 5. Evidence Attachments
 
-- Dashboard loading.
-- Revenue, expenses, and net profit indicators.
-- Cash flow information.
-- Financial charts.
-- Recent transactions.
-- Data consistency.
+No Telegram delivery screenshot or end-to-end success evidence is asserted in this document. Add actual, redacted evidence under `../08_Automation/screenshots/` only after capture. Do not include bot tokens, credentials, private URLs, real customer financial data, or sensitive chat information.
 
-Result: Passed.
+## 6. Overall Status
 
-3.4 Transaction Management
-
-- Adding income and expenses.
-- Editing and deleting transactions.
-- Searching and filtering transactions.
-- Filtering by type, category, and date.
-- Updating financial data.
-
-Result: Passed.
-
-3.5 Financial Intelligence
-
-- Financial performance analysis.
-- Revenue and expense analysis.
-- Net profit analysis.
-- Period comparison.
-- Expense category analysis.
-- Unusual expense detection.
-- Financial alerts and AI recommendations.
-
-Result: Passed.
-
-3.6 Financial Reports
-
-- Monthly and annual reports.
-- Revenue and expense summaries.
-- Net profit and profit margin calculations.
-- Monthly breakdown.
-- Financial charts.
-- PDF report export.
-
-Result: Passed.
-
-3.7 AI Financial Assistant
-
-The assistant was tested using financial questions, including:
-
-1. How much did we spend this month?
-2. What is our net profit?
-3. Why did our expenses increase?
-4. What is our highest expense category?
-
-Additional checks covered company context, financial figures, explanations, recommendations, and consecutive chat messages.
-
-Result: Passed.
-
-4. Automated Testing Results
-
-Two automated test groups were recorded:
-
-Test Group| Executions| Result
-Authentication & Navigation| 30| Passed
-Invoice Tests| 58| Passed
-Total| 88| Passed
-
-5. Evidence Attachments
-
-The following evidence can be added to the repository when available:
-
-Evidence| Suggested File
-Authentication test screenshot| "auth-testing.png"
-Dashboard test screenshot| "dashboard-testing.png"
-Transaction test screenshot| "transactions-testing.png"
-Financial Intelligence screenshot| "financial-intelligence-testing.png"
-Reports test screenshot| "reports-testing.png"
-AI Assistant test screenshot| "ai-assistant-testing.png"
-Automated test results| "automated-test-results.png"
-
-6. Overall Testing Result
-
-The reported testing results indicate that the main AI CFO application modules passed their functional test scenarios, alongside 88 recorded automated test executions.
-
-Testing helped evaluate the platform's main financial operations, data presentation, analysis capabilities, reporting features, and AI-assisted interactions.
-
-Overall Status: Passed
-
----
-
-Document: Testing Evidence
-Project: AI CFO – Intelligent Financial Management Platform
+The core application testing results remain as previously documented. The Telegram monthly report workflow is implemented and configured; PDF archival and prior metadata retrieval are reported successful. Actual PDF receipt in Telegram remains pending verification.

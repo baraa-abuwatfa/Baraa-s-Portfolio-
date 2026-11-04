@@ -2,159 +2,110 @@
 
 ## 1. Prototype Overview
 
-AI CFO is an AI-powered financial management platform designed to help small business owners and companies understand their financial performance through organized financial data, interactive dashboards, reports, and AI-assisted financial insights.
+AI CFO is an AI-powered financial management platform for organizing financial data, reviewing performance through dashboards and reports, and exploring AI-assisted insights. The prototype also includes an implemented and configured n8n Cloud workflow for monthly report PDF delivery through Telegram.
 
-The prototype demonstrates how financial transactions can be managed, analyzed, and transformed into meaningful information that supports better business decisions.
+## 2. Application Features
 
-The system combines financial management features with AI-assisted analysis to simplify financial monitoring and decision-making.
-
-## 2. Implemented Features
-
-### 🔐 2.1 Authentication & Company Management
-
-The system provides user authentication and company-based access management.
-
-**Available functionality:**
+### Authentication & Company Management
 
 - User registration and login.
-- Company setup and management.
-- Company membership management.
-- Role-based access permissions.
+- Company setup and membership management.
+- Role-based access permissions for Owner, Admin, Finance Manager, and Viewer.
 
-**Supported roles:**
+### Financial Dashboard
 
-| Role | Description |
+The dashboard summarizes total revenue, total expenses, net profit, and cash flow using available financial records and visual charts.
+
+### Transaction Management
+
+Authorized users can add, edit, delete, search, filter, and categorize income and expense records.
+
+### Financial Intelligence
+
+The application provides financial trends, period comparisons, expense category analysis, unusual-expense observations, and AI-assisted recommendations based on available data. Users remain responsible for reviewing insights and making decisions.
+
+### Financial Reports
+
+The application provides monthly and annual summaries, revenue and expense totals, net profit and margin indicators, charts, and PDF export. **The application generates and archives the PDF when the user exports a monthly report. n8n retrieves and delivers that archived PDF; it does not generate the PDF.**
+
+## 3. Monthly Financial Report Telegram Automation
+
+The n8n Cloud workflow is implemented and configured to deliver the archived monthly report PDF to the configured Telegram Chat ID.
+
+```mermaid
+flowchart TD
+    A[Monthly Schedule: Day 2, 09:00 Asia/Gaza] --> C[Configuration]
+    M[Manual Test Trigger] --> C
+    C --> Q[Retrieve Latest Monthly Report for Configured Company]
+    Q --> R{Report Found?}
+    R -->|No| N[Stop / Handle Missing Report]
+    R -->|Yes| D[Download PDF from Private Supabase Storage]
+    D --> V[Validate PDF Binary]
+    V --> P[Prepare Professional Arabic Telegram Message]
+    P --> T[Telegram Bot API: Send Document]
+    T --> U[Configured Telegram Chat ID]
+```
+
+### Workflow Configuration
+
+| Setting | Configured value / behavior |
 |---|---|
-| Owner | Has full control over the company and its financial data. |
-| Admin | Manages company operations and permitted information. |
-| Finance Manager | Manages financial transactions and related activities. |
-| Viewer | Can view financial information without modifying it. |
+| Orchestration | n8n Cloud |
+| Schedule | Day 2 of each month at 09:00, `Asia/Gaza` |
+| Manual test | Manual Test Trigger |
+| Report metadata | Supabase `report_files` table |
+| Storage bucket | `financial-reports` (private) |
+| Storage path column | `storage_path` |
+| File format | PDF |
+| Delivery | Telegram Bot API document send |
+| Recipient | Configured Telegram Chat ID |
+| Notification | Professional Arabic message accompanying the document |
 
-### 📊 2.2 Financial Dashboard
+The workflow retrieves the latest monthly report for the configured company. Report creation and archival happen in the application during user export; n8n downloads the archived PDF.
 
-The dashboard provides an overview of the company's financial performance.
+### Implementation and Verification Status
 
-**Key indicators:**
-
-- Total Revenue
-- Total Expenses
-- Net Profit
-- Cash Flow
-
-The dashboard presents financial information through summary cards and visual charts, helping users monitor business performance.
-
-### 💳 2.3 Transaction Management
-
-The transaction management module allows authorized users to manage company financial records.
-
-**Available functionality:**
-
-- Add income and expense transactions.
-- Edit existing transactions.
-- Delete transactions.
-- Search and filter financial records.
-- Organize transactions by category.
-- Record transaction amounts, dates, and descriptions.
-
-Transactions provide the financial data used by the dashboard, reports, and financial intelligence features.
-
-### 🧠 2.4 Financial Intelligence
-
-Financial Intelligence is one of the core features of AI CFO.
-
-It analyzes available financial transaction data and presents insights that help users understand their company's financial situation.
-
-**Key capabilities:**
-
-- Revenue and expense trend analysis.
-- Net profit analysis.
-- Period comparisons.
-- Expense category analysis.
-- Detection of unusual expenses.
-- AI-assisted financial recommendations.
-
-The purpose of this feature is to turn financial records into understandable insights and support informed decision-making.
-
-> **Important:** AI CFO provides analytical support and recommendations. Final business and financial decisions remain with the user.
-
-### 📑 2.5 Financial Reports
-
-The Financial Reports module provides structured financial summaries for different reporting periods.
-
-**Available functionality:**
-
-- Monthly financial summaries.
-- Annual financial summaries.
-- Revenue and expense summaries.
-- Net profit calculations.
-- Profit margin indicators.
-- Financial tables and visual charts.
-
-Reports help users review financial performance and understand changes over time.
-
-## 3. How the Prototype Works
-
-The main user workflow is:
-
-1. The user registers or logs in.
-2. The user creates or selects a company.
-3. The user adds or manages financial transactions.
-4. Financial records are stored in the database.
-5. The system uses available financial data to calculate indicators and generate analysis.
-6. The user reviews dashboard information, reports, and financial insights.
-7. The user uses the presented information to make informed decisions.
+| Capability / evidence | Status |
+|---|---|
+| n8n workflow implementation and configuration | Implemented and configured |
+| Application PDF generation and Supabase archival | Successful |
+| Supabase report metadata retrieval | Previously successful |
+| Actual PDF received in Telegram end-to-end | Pending verification; do not claim success until confirmed |
 
 ## 4. Technology Stack
 
 | Technology | Purpose |
 |---|---|
-| Lovable | Application development and user interface generation. |
-| Supabase | Database, authentication, and backend services. |
-| AI Integration | Financial analysis and AI-assisted recommendations. |
-| n8n Cloud | Planned workflow automation integration. |
+| Lovable | Application interface development |
+| Supabase | Database, authentication, report metadata, and private storage |
+| AI integration | Financial analysis and recommendations |
+| n8n Cloud | Monthly report workflow orchestration |
+| Telegram Bot API | PDF document delivery |
 
 ## 5. Prototype Access
 
-- **Application Name:** AI CFO
-- **Demo Link:** [Add your deployed application URL here]
-- **Repository:** [Add your GitHub repository URL here]
+- **Application:** AI CFO
+- **Demo link:** [Add your deployed application URL here]
+- **Repository:** [Add the repository URL here]
 
 ## 6. Screenshots & Evidence
 
-The following screenshots can be added to demonstrate the implemented prototype.
+Add only screenshots from the actual application or workflow. Do not invent evidence or include secrets or real customer financial information.
 
-| Screenshot | Description |
-|---|---|
-| `screenshots/login.png` | Login interface. |
-| `screenshots/dashboard.png` | Financial dashboard and key indicators. |
-| `screenshots/transactions.png` | Transaction management interface. |
-| `screenshots/financial-intelligence.png` | Financial analysis and AI recommendations. |
-| `screenshots/financial-reports.png` | Monthly and annual financial reports. |
-| `screenshots/company-management.png` | Company setup or membership management. |
+- `screenshots/login.png` — login interface, if captured.
+- `screenshots/dashboard.png` — dashboard, if captured.
+- `screenshots/transactions.png` — transaction interface, if captured.
+- `screenshots/financial-intelligence.png` — financial analysis, if captured.
+- `screenshots/financial-reports.png` — report/export interface, if captured.
+- Automation screenshots belong in `../08_Automation/screenshots/` and should show only verified workflow configuration or test evidence.
 
-Screenshots should represent the actual implemented application.
+## 7. Known Limitations
 
-## 7. Current Implementation Status
-
-| Component | Status |
-|---|---|
-| User Authentication | Implemented |
-| Company Management | Implemented |
-| Role-Based Access | Implemented |
-| Financial Dashboard | Implemented |
-| Transaction Management | Implemented |
-| Financial Intelligence | Implemented |
-| Financial Reports | Implemented |
-| Monthly Report Email Automation | Planned |
-| Unusual Expense Email/Telegram Alerts | Planned |
-
-## 8. Known Limitations
-
-- The prototype depends on the financial data entered by users.
-- The accuracy of financial analysis depends on the completeness and correctness of transaction records.
-- AI-generated recommendations should be reviewed by users before making financial decisions.
-- The two n8n automation workflows are planned future integrations and are not part of the currently implemented prototype.
-- The prototype is intended to demonstrate the solution and its core functionality rather than replace professional accounting or financial advisory services.
+- Financial analysis depends on the completeness and correctness of entered transaction data.
+- AI-generated recommendations require user review and do not replace professional accounting or financial advice.
+- Telegram delivery must be verified by receiving the actual PDF in the configured chat; this end-to-end result is currently pending verification.
+- Automation depends on a report PDF already being generated and archived by the application for the configured company.
+- Credentials and bot tokens must be stored as protected n8n credentials or secure configuration, never in source control.
 
 ---
 

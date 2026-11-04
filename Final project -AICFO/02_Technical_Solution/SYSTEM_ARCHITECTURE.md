@@ -2,274 +2,108 @@
 
 ## 1. Architecture Overview
 
-AI CFO follows a web-based application architecture that combines a user interface, backend services, database management, authentication, and AI-assisted financial analysis.
+AI CFO combines a web application, Supabase backend and storage, financial analysis features, and an n8n Cloud workflow that retrieves and delivers archived monthly report PDFs through Telegram.
 
-The architecture is designed to organize company financial data, process transactions, generate financial indicators, and provide insights that support business decision-making.
-
-The main technologies used in the prototype are:
-
-- **Lovable:** Application interface and development.
-- **Supabase:** Authentication, database, and backend services.
-- **AI Integration:** Financial analysis and recommendations.
-- **n8n Cloud:** Planned automation workflows.
+The application generates and archives a monthly report PDF when a user exports it. n8n orchestrates retrieval and delivery; it does not generate the PDF.
 
 ## 2. System Architecture Diagram
 
-The following diagram illustrates the main components and their relationships.
-
 ```mermaid
 flowchart TD
-    U[User] --> UI[AI CFO Interface]
-    UI --> AUTH[Supabase Authentication]
-    AUTH --> CM[Company and Role Management]
+    USER[User] --> APP[AI CFO Web Application]
+    APP --> AUTH[Supabase Authentication]
+    APP --> DB[(Supabase PostgreSQL)]
+    APP --> EXPORT[Monthly Report Export]
+    EXPORT --> PDF[Generate and Archive PDF]
+    PDF --> BUCKET[(Private financial-reports bucket)]
+    PDF --> META[(report_files metadata)]
 
-    UI --> TM[Financial Transactions]
-    TM --> DB[(Supabase Database)]
-
-    DB --> AI[AI Financial Intelligence]
-    AI --> DASH[Financial Dashboard]
-    AI --> REP[Financial Reports]
-    AI --> INS[Insights and Recommendations]
-
-    N8N[n8n Cloud - Planned]
-    N8N -.-> REP
-    N8N -.-> INS
+    SCHED[Monthly Schedule: Day 2, 09:00 Asia/Gaza] --> N8N[n8n Cloud Workflow]
+    MANUAL[Manual Test Trigger] --> N8N
+    N8N --> LOOKUP[Retrieve latest report for configured company]
+    LOOKUP --> META
+    LOOKUP --> FOUND{Report found?}
+    FOUND -->|No| NOREPORT[Missing-report handling]
+    FOUND -->|Yes| DOWNLOAD[Download PDF using storage_path]
+    DOWNLOAD --> BUCKET
+    DOWNLOAD --> VALIDATE[Validate PDF binary]
+    VALIDATE --> MESSAGE[Prepare Arabic Telegram notification]
+    MESSAGE --> SEND[Telegram Bot API: Send Document]
+    SEND --> CHAT[Configured Telegram Chat ID]
 ```
 
-> **Note:** The n8n connections represent planned future integrations, not currently implemented workflows.
+## 3. Monthly Telegram Automation Components
 
-## 3. System Components
-
-### 3.1 User Interface Layer
-
-The user interface is developed using Lovable. It provides the main interaction points between users and the application.
-
-Main interface modules:
-
-- Authentication pages.
-- Company setup and management.
-- Financial dashboard.
-- Transaction management.
-- Financial Intelligence.
-- Financial Reports.
-
-### 3.2 Authentication & Backend Layer
-
-Supabase provides backend services for the application.
-
-Its responsibilities include:
-
-- User authentication.
-- Company membership management.
-- Database operations.
-- Access control through Row Level Security (RLS).
-
-### 3.3 Database Layer
-
-Supabase PostgreSQL is used to store application data.
-
-The confirmed database entities include:
-
-| Table | Purpose |
+| Component | Responsibility |
 |---|---|
-| `profiles` | Stores user profile information. |
-| `companies` | Stores company information and settings. |
-| `company_members` | Connects users to companies and manages their roles. |
+| AI CFO application | Generates and archives the PDF when a user exports a monthly report. |
+| n8n Cloud | Runs scheduled or manual workflow and orchestrates lookup, retrieval, validation, and delivery. |
+| Supabase PostgreSQL | Stores report metadata in `report_files`. |
+| Supabase Storage | Stores PDF in private `financial-reports` bucket. |
+| `storage_path` | Metadata column containing the actual archived object path. |
+| Telegram Bot API | Sends the PDF document and notification to configured Telegram Chat ID. |
 
-Financial transaction records are also stored in the application's database and are used by the financial features.
+### Schedule and Triggers
 
-> **Note:** The exact transaction table name and its complete column structure should be documented after verification against the current database schema.
+- Scheduled trigger: monthly, day 2 at 09:00, timezone `Asia/Gaza`.
+- Manual trigger: Manual Test Trigger for controlled testing.
 
-### 3.4 AI Financial Intelligence Layer
+### Workflow Sequence
 
-The AI Financial Intelligence component uses available financial data to support analysis.
+1. Load workflow configuration, including the configured company and destination chat.
+2. Retrieve the latest monthly report metadata for that company from `report_files`.
+3. Check whether a report record was found; handle the missing-report path without attempting an invalid download.
+4. Read the actual `storage_path` column and download the PDF from the private `financial-reports` bucket using authorized Supabase access.
+5. Validate that the downloaded binary is present and is a PDF before sending.
+6. Prepare a professional Arabic Telegram notification.
+7. Send the actual document through the Telegram Bot API to the configured Chat ID.
 
-Its responsibilities include:
+## 4. Data and Storage Architecture
 
-- Analyzing revenue and expenses.
-- Identifying financial trends.
-- Comparing financial periods.
-- Analyzing expense categories.
-- Identifying unusual expenses.
-- Generating financial recommendations.
+The project uses Supabase PostgreSQL and Supabase Storage. Known application entities include `profiles`, `companies`, and `company_members`. The automation uses the `report_files` metadata table; the storage object path is read from `storage_path`.
 
-The AI component supports users by explaining financial patterns and highlighting potential issues. It does not independently execute financial decisions.
-
-## 4. Technology Architecture
-
-| Layer | Technology | Responsibility |
-|---|---|---|
-| Frontend | Lovable | User interface and application experience. |
-| Backend Services | Supabase | Backend operations and application services. |
-| Database | Supabase PostgreSQL | Storing company and financial data. |
-| Authentication | Supabase Auth | User registration and login. |
-| Authorization | Supabase RLS | Protecting company data and controlling access. |
-| Intelligence | AI Integration | Financial analysis and recommendations. |
-| Automation | n8n Cloud | Planned email and notification workflows. |
-
-## 5. Database Architecture
-
-The application uses a company-based data structure.
-
-Users can belong to companies through company membership records. Each membership is associated with a role that determines the user's permitted actions.
-
-### Main Relationships
-
-```mermaid
-erDiagram
-    PROFILES ||--o{ COMPANY_MEMBERS : has
-    COMPANIES ||--o{ COMPANY_MEMBERS : includes
-
-    PROFILES {
-        uuid id
-    }
-
-    COMPANIES {
-        uuid id
-        string name
-        string primary_currency
-    }
-
-    COMPANY_MEMBERS {
-        uuid id
-        uuid company_id
-        uuid user_id
-        string role
-        string status
-    }
-```
-
-The diagram shows the confirmed company membership structure. Financial transaction relationships are not included here because the exact transaction schema must be verified.
-
-## 6. Authentication & Authorization
-
-Supabase Authentication manages user registration and login.
-
-The application uses company-based roles to control access to financial information.
-
-### Role-Based Permissions
-
-| Role | Access |
+| Storage setting | Value |
 |---|---|
-| Owner | Full company access and management. |
-| Admin | Administrative access according to assigned permissions. |
-| Finance Manager | Financial transaction management and financial operations. |
-| Viewer | Read-only access to available company information. |
+| Bucket | `financial-reports` |
+| Visibility | Private |
+| File type | PDF |
+| Metadata table | `report_files` |
+| Object path column | `storage_path` |
 
-### Security Mechanisms
+The automation must use authenticated access to private storage. Do not publish a public bucket URL or expose service credentials in client-side code or documentation.
 
-The system uses:
+## 5. Authentication, Security, and Privacy
 
-- Supabase Authentication.
-- Row Level Security (RLS).
-- Company membership checks.
-- Role-based authorization.
-- Database-level protection for company membership operations.
+- Use least-privilege Supabase credentials in protected n8n credentials/configuration.
+- Keep Telegram bot tokens and Chat IDs out of committed files and screenshots; treat recipient identifiers as configuration data.
+- Restrict access to the private bucket and report metadata according to the configured company and required workflow permissions.
+- Do not log full report contents, tokens, signed URLs, or sensitive financial data unnecessarily.
+- Validate the expected report and binary before sending, and avoid sending a report if company, period, or file validation fails.
+- Use synthetic or anonymized information in demonstrations and test evidence.
 
-These mechanisms help ensure that users can access only the company data and operations permitted by their roles.
+These are security requirements for the integration; actual policy configuration should be verified in the deployed Supabase and n8n environments.
 
-## 7. Data Flow
+## 6. Error Handling and Observability
 
-The main data flow follows these steps:
+The workflow should handle at least these conditions explicitly:
 
-1. The user logs into AI CFO.
-2. Supabase verifies the user's authentication.
-3. The application identifies the selected company and the user's role.
-4. The user adds or manages financial transactions.
-5. Financial records are stored in the database.
-6. The application retrieves the relevant financial data.
-7. Financial calculations and AI-assisted analysis are performed.
-8. Results are displayed through the dashboard, reports, and Financial Intelligence interface.
-9. The user reviews the results and makes the final decision.
+- No report metadata found for the configured company/period: stop the send path and record a non-sensitive outcome.
+- Supabase query or storage download error: fail the run visibly; do not send an empty or stale binary.
+- Missing/invalid PDF binary: stop before Telegram delivery.
+- Telegram API error or rejected document: mark the run as failed and retain enough non-sensitive execution context for diagnosis.
+- Retries, where configured, should avoid duplicate sends or make duplicate behavior clear.
 
-## 8. AI Financial Intelligence
+Do not treat a successful query or workflow execution as proof of end-to-end delivery. Confirmation requires receiving and inspecting the actual PDF in the configured Telegram chat.
 
-AI Financial Intelligence transforms financial records into meaningful information.
+## 7. Implementation and Verification Status
 
-### Input Data
+| Item | Status |
+|---|---|
+| n8n workflow | Implemented and configured |
+| Application-generated PDF archival in Supabase | Successful |
+| Supabase report metadata retrieval | Previously successful |
+| Telegram document delivery of a real PDF | Pending end-to-end verification |
 
-- Income transactions.
-- Expense transactions.
-- Transaction dates.
-- Financial categories.
-- Transaction amounts.
-- Selected reporting periods.
+## 8. Future Changes
 
-### Processing
-
-The application uses available financial data to calculate financial indicators and support AI-assisted analysis.
-
-### Output
-
-- Financial performance insights.
-- Revenue and expense trends.
-- Period comparisons.
-- Unusual expense observations.
-- Category analysis.
-- Financial recommendations.
-
-> **Decision Responsibility:** AI CFO provides decision support. Users remain responsible for reviewing the analysis and making final financial decisions.
-
-## 9. Security & Data Protection
-
-The architecture uses Supabase security features to protect user and company information.
-
-Key measures include:
-
-- Authentication before accessing protected application features.
-- Role-based permissions.
-- Row Level Security policies.
-- Company membership validation.
-- Restricted access to company-specific information.
-
-Security configurations should be reviewed and tested whenever database policies or user permissions are changed.
-
-## 10. Future Automation Integration
-
-The architecture allows future integration with n8n Cloud to automate selected financial communication tasks.
-
-Two workflows are planned:
-
-### 10.1 Monthly Financial Report
-
-**Planned flow:**
-
-```text
-Schedule Trigger
-      ↓
-Retrieve Monthly Financial Report
-      ↓
-Prepare Report Information
-      ↓
-Send Email to Company Owner
-```
-
-**Purpose:** Automatically send the company's monthly financial report to its owner.
-
-### 10.2 Unusual Expense Alert
-
-**Planned flow:**
-
-```text
-Expense Trigger
-      ↓
-Check Unusual Expense
-      ↓
-Prepare Alert
-      ↓
-Notify Company Owner (Email or Telegram)
-```
-
-**Purpose:** Notify the company owner when an unusual expense is identified.
-
-> **Implementation Status:** Both workflows are planned future integrations. They should not be considered implemented until they are built, connected, and tested successfully.
-
----
-
-## 11. Architecture Summary
-
-AI CFO uses a modular architecture that connects the user interface, authentication, company management, financial data storage, and AI-assisted analysis.
-
-This structure supports the core financial management features while allowing future expansion through workflow automation.
-
-**AI CFO — Turning Financial Data into Intelligent Decisions.**
+The monthly report delivery channel documented here is Telegram. Do not describe this implemented/configured workflow as a future email or SMTP automation. Other automation ideas, if later proposed, must be documented separately and accurately labeled.
