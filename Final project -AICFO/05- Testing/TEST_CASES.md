@@ -1,48 +1,211 @@
-# 🧪 AI CFO — Test Cases
+# 🧪 AI CFO – Software Testing & Test Cases
 
-## 1. Testing Overview
+> 🤖 **Project:** AI CFO – AI-Powered Financial Management System  
+> 🎯 **Purpose:** Verify system functionality, financial accuracy, AI-generated insights, data security, and automation workflows.  
+> 👩‍💻 **Prepared by:** Baraa Mahmoud Abu Watfa  
+> 🏷️ **Role:** Software QA Engineer  
+> 📌 **Version:** 1.0
 
-Functional testing documentation covers authentication and navigation, company management, the financial dashboard, transaction management, financial intelligence, financial reports, and the AI Financial Assistant. Existing recorded test results are summarized in [Testing Evidence](./TESTING_EVIDENCE.md).
+---
 
-The monthly Telegram report workflow is documented as implemented and configured. Its end-to-end document delivery must be tested separately; no success is claimed until an actual PDF is received in Telegram.
+## 📋 1. Testing Overview
 
-## 2. Existing Application Test Coverage
+This document contains test cases designed to validate the main functionalities of the AI CFO application.
 
-| Module | Recorded functional cases | Previously recorded status |
-|---|---:|---|
-| Authentication and Navigation | 6 | Passed |
-| Company Management | 6 | Passed |
-| Financial Dashboard | 8 | Passed |
-| Transaction Management | 10 | Passed |
-| Financial Intelligence | 10 | Passed |
-| Financial Reports | 10 | Passed |
-| AI Financial Assistant | 10 | Passed |
-| **Total** | **60** | **Passed** |
+### 🔍 Testing Types
+- ✅ Functional Testing
+- ❌ Negative Testing
+- 📝 Validation Testing
+- 🔐 Security Testing
+- 🔗 Integration Testing
+- 🤖 AI Testing
+- 📱 Usability Testing
+- 🔄 Regression Testing
 
-Separately recorded automated tests: Authentication & Navigation — 30 executions; Invoice Tests — 58 executions; total 88. These are not added to the 60 functional scenarios.
+---
 
-## 3. Monthly Telegram Automation Test Cases
+## 🔑 2. Authentication & Company Management
 
-| ID | Scenario | Test outline | Expected result | Evidence/status |
-|---|---|---|---|---|
-| AUTO-001 | Schedule configuration | Inspect schedule configuration in n8n. | Monthly trigger is day 2 at 09:00 in `Asia/Gaza`. | Configured; retain redacted evidence if captured. |
-| AUTO-002 | Manual trigger | Start workflow using Manual Test Trigger. | Workflow begins without waiting for the monthly schedule. | To be recorded. |
-| AUTO-003 | Latest report lookup | Query `report_files` for the latest monthly report for the configured company. | Correct report metadata is found; workflow uses the `storage_path` column. | Supabase retrieval previously successful; retain execution evidence if available. |
-| AUTO-004 | Missing report | Test with a company/period without report metadata. | No download or Telegram send occurs; the missing-report outcome is visible. | To be tested/recorded. |
-| AUTO-005 | Private PDF download | Download the archived PDF from private `financial-reports` storage. | Authorized retrieval returns the intended PDF binary without making the bucket public. | PDF archival successful; record a specific download execution. |
-| AUTO-006 | PDF validation | Test absent or invalid binary in a controlled environment. | Invalid/non-PDF data is stopped before Telegram send. | To be tested/recorded. |
-| AUTO-007 | Arabic message preparation | Inspect the notification prepared for a valid report. | Professional Arabic notification accompanies the correct report. | To be recorded. |
-| AUTO-008 | Telegram document delivery | Send an actual archived PDF to the configured Telegram Chat ID. | PDF arrives and opens in the destination chat. | **Pending end-to-end verification.** |
-| AUTO-009 | Telegram API failure | Use a controlled invalid test configuration or safe failure scenario. | Workflow reports failure; it does not claim delivery succeeded. | To be tested/recorded. |
-| AUTO-010 | Credential privacy | Inspect repository content and evidence before committing. | No bot token, private key, password, or secret is committed. | Verify before every commit. |
+| 🆔 Test Case ID | 🧪 Test Scenario | 🎯 Expected Result | ⚡ Priority |
+|---|---|---|---|
+| TC-001 | Register with valid information | Account is created successfully | High |
+| TC-002 | Register with invalid email | Validation error is displayed | High |
+| TC-003 | Login with valid credentials | User is authenticated successfully | High |
+| TC-004 | Login with incorrect password | Login is rejected with an error message | High |
+| TC-005 | Submit login form with empty fields | Required field validation is displayed | Medium |
+| TC-006 | Create a new company | Company is created successfully | High |
+| TC-007 | Access dashboard without company setup | User is redirected to company setup | High |
+| TC-008 | Select an existing company | Correct company information is displayed | High |
 
-## 4. Workflow Under Test
+## 💰 3. Transactions Management
 
-The application generates and archives the PDF when the user exports a monthly report. The n8n Cloud workflow runs on the monthly schedule (day 2, 09:00, `Asia/Gaza`) or Manual Test Trigger, retrieves report metadata from Supabase `report_files`, downloads the PDF from the private `financial-reports` bucket via `storage_path`, validates the binary, prepares an Arabic Telegram notification, and sends the PDF using the Telegram Bot API.
+| 🆔 Test Case ID | 🧪 Test Scenario | 🎯 Expected Result | ⚡ Priority |
+|---|---|---|---|
+| TC-009 | Add a valid income transaction | Income transaction is saved successfully | High |
+| TC-010 | Add a valid expense transaction | Expense transaction is saved successfully | High |
+| TC-011 | Submit transaction with missing required fields | Validation prevents invalid submission | High |
+| TC-012 | Edit an existing transaction | Updated information is saved | High |
+| TC-013 | Delete an existing transaction | Transaction is removed successfully | High |
+| TC-014 | Search for a transaction | Matching results are displayed | Medium |
+| TC-015 | Filter transactions by date | Matching transactions are displayed | Medium |
+| TC-016 | Filter transactions by category | Matching transactions are displayed | Medium |
+| TC-017 | Enter a negative transaction amount | Input validation is performed | High |
+| TC-018 | Enter an invalid transaction date | Invalid date is rejected | Medium |
 
-## 5. Result Recording Rules
+## 📊 4. Dashboard Testing
 
-- Record only observed results and link actual, redacted evidence.
-- A successful Supabase query or n8n execution does not prove that the document arrived.
-- Mark Telegram delivery passed only after the actual PDF has been received and opened in the configured Telegram chat.
-- Do not include credentials or real customer financial information in test evidence.
+| 🆔 Test Case ID | 🧪 Test Scenario | 🎯 Expected Result | ⚡ Priority |
+|---|---|---|---|
+| TC-019 | Open the dashboard | Dashboard loads successfully | High |
+| TC-020 | Verify total revenue | Revenue matches recorded income | High |
+| TC-021 | Verify total expenses | Expenses match recorded expenses | High |
+| TC-022 | Verify net profit | Net profit reflects revenue and expenses | High |
+| TC-023 | Verify cash flow | Cash flow reflects underlying financial data | High |
+| TC-024 | Update a transaction | Related dashboard figures are updated | High |
+| TC-025 | Open dashboard without transactions | Appropriate empty state is displayed | Medium |
+
+## 🤖 5. Financial Intelligence – AI Testing
+
+| 🆔 Test Case ID | 🧪 Test Scenario | 🎯 Expected Result | ⚡ Priority |
+|---|---|---|---|
+| TC-026 | Open Financial Intelligence | Analysis page loads successfully | High |
+| TC-027 | Analyze financial transactions | AI analyzes the selected company's financial data | High |
+| TC-028 | Display revenue trends | Trends reflect actual transaction data | High |
+| TC-029 | Display expense trends | Trends reflect actual transaction data | High |
+| TC-030 | Compare financial periods | Comparison reflects selected periods | Medium |
+| TC-031 | Detect unusual expenses | Unusual expense candidates are identified | High |
+| TC-032 | Analyze expense categories | Analysis reflects recorded transactions | Medium |
+| TC-033 | Generate financial recommendations | Recommendations are supported by financial evidence | High |
+| TC-034 | Analyze a company without transactions | Missing data is handled appropriately | Medium |
+| TC-035 | Change the selected date range | Analysis updates according to the selected period | High |
+| TC-036 | Analyze another company's data | Only the selected company's data is used | Critical |
+
+## 📄 6. Financial Reports Testing
+
+| 🆔 Test Case ID | 🧪 Test Scenario | 🎯 Expected Result | ⚡ Priority |
+|---|---|---|---|
+| TC-037 | Open Financial Reports | Reports page loads successfully | High |
+| TC-038 | Generate monthly report | Report reflects the selected month | High |
+| TC-039 | Generate annual report | Report reflects the selected year | High |
+| TC-040 | Verify total revenue | Report revenue matches financial records | High |
+| TC-041 | Verify total expenses | Report expenses match financial records | High |
+| TC-042 | Verify net profit | Net profit is calculated consistently | High |
+| TC-043 | Verify profit margin | Profit margin is calculated consistently | High |
+| TC-044 | Export report as PDF | PDF report is generated successfully | High |
+| TC-045 | Open exported PDF | PDF is readable and correctly formatted | Medium |
+| TC-046 | Generate report without transactions | Appropriate empty report state is displayed | Medium |
+
+## 🔐 7. User Roles & Permissions
+
+| 🆔 Test Case ID | 🧪 Test Scenario | 🎯 Expected Result | ⚡ Priority |
+|---|---|---|---|
+| TC-047 | Owner accesses company data | Authorized features are accessible | Critical |
+| TC-048 | Admin accesses company data | Admin permissions are respected | High |
+| TC-049 | Finance Manager adds a transaction | Authorized transaction creation succeeds | High |
+| TC-050 | Viewer attempts to add a transaction | Write access is denied | Critical |
+| TC-051 | Viewer accesses financial reports | Read access is allowed | High |
+| TC-052 | User accesses another company's data | Unauthorized access is prevented | Critical |
+| TC-053 | Suspended member attempts access | Access is restricted | Critical |
+| TC-054 | Unauthenticated user accesses protected pages | Access is denied or redirected to login | Critical |
+
+## ⚙️ 8. n8n Automation Testing
+
+### 📧 8.1 Monthly Financial Report Automation
+
+| 🆔 Test Case ID | 🧪 Test Scenario | 🎯 Expected Result | ⚡ Priority |
+|---|---|---|---|
+| TC-055 | Trigger monthly report workflow | Workflow starts according to its schedule | High |
+| TC-056 | Retrieve financial report data | Correct company report data is retrieved | High |
+| TC-057 | Send monthly report email | Email is sent to the company owner | High |
+| TC-058 | Verify email report content | Email contains correct financial information | High |
+| TC-059 | Simulate email service failure | Workflow handles failure appropriately | Medium |
+
+### 🚨 8.2 Unusual Expense Alert Automation
+
+| 🆔 Test Case ID | 🧪 Test Scenario | 🎯 Expected Result | ⚡ Priority |
+|---|---|---|---|
+| TC-060 | Trigger unusual expense alert | Workflow starts when trigger conditions are met | High |
+| TC-061 | Check unusual expense details | Expense information is checked correctly | High |
+| TC-062 | Send unusual expense notification | Owner receives notification through configured channel | High |
+| TC-063 | Verify notification details | Alert contains correct expense information | High |
+| TC-064 | Simulate notification service failure | Workflow handles failure appropriately | Medium |
+
+## 🌐 9. General System Testing
+
+| 🆔 Test Case ID | 🧪 Test Scenario | 🎯 Expected Result | ⚡ Priority |
+|---|---|---|---|
+| TC-065 | Refresh a system page | Page loads without losing saved data | Medium |
+| TC-066 | Navigate between system pages | Navigation works correctly | Medium |
+| TC-067 | Open application on mobile | Interface adapts to mobile screens | Medium |
+| TC-068 | Switch between Arabic and English | Selected language displays correctly | Medium |
+| TC-069 | Verify company currency display | Financial values use the selected company currency | High |
+| TC-070 | Simulate network failure during submission | Failure is handled without misleading success messages | High |
+
+## 🧠 10. AI Quality Testing
+
+| 🆔 Test Case ID | 🧪 Test Scenario | 🎯 Expected Result | ⚡ Priority |
+|---|---|---|---|
+| TC-071 | Provide incomplete financial data to AI | AI identifies data limitations | High |
+| TC-072 | Generate a financial recommendation | Recommendation is supported by financial evidence | High |
+| TC-073 | Provide inconsistent financial data | AI avoids unsupported conclusions | High |
+| TC-074 | Analyze unusual spending patterns | Detection reflects available transaction patterns | High |
+| TC-075 | Repeat analysis using unchanged input data | Results remain consistent where deterministic behavior is expected | Medium |
+
+---
+
+## 📈 11. Test Execution Summary
+
+### 📌 Test Status Definitions
+
+| Status | Description |
+|---|---|
+| 🟢 Pass | Actual result matches expected result |
+| 🔴 Fail | Actual result differs from expected result |
+| 🟡 Blocked | Test execution cannot continue |
+| ⚪ Not Executed | Test has not been performed yet |
+
+### 📝 Execution Tracking
+
+| Test Case ID | Actual Result | Status | Bug ID |
+|---|---|---|---|
+| TC-001 | Pending | Not Executed | N/A |
+| TC-002 | Pending | Not Executed | N/A |
+| TC-003 | Pending | Not Executed | N/A |
+| TC-004 | Pending | Not Executed | N/A |
+| TC-005 | Pending | Not Executed | N/A |
+
+---
+
+## 🐛 12. Bug Reporting Guidelines
+
+When a test case fails, document the defect with:
+
+- 🆔 Bug ID
+- 📝 Bug Title
+- 🔄 Steps to Reproduce
+- 🎯 Expected Result
+- ❌ Actual Result
+- ⚡ Severity
+- 📸 Screenshot or Evidence
+- 📌 Bug Status
+
+---
+
+## 📌 13. Testing Notes
+
+- Test cases are based on the defined AI CFO features.
+- Expected results must be verified against actual application behavior.
+- Unspecified business rules require clarification.
+- Security testing should verify company-level data isolation and role-based permissions.
+- AI outputs should be evaluated for accuracy, consistency, and evidence-based recommendations.
+- Test execution results should be updated after performing each test.
+
+---
+
+### 🎯 Final QA Goal
+
+Ensure that AI CFO delivers reliable financial management, accurate financial insights, secure company data, and dependable automation workflows.
+
+**Prepared by:** Baraa Mahmoud Abu Watfa  
+**Document:** AI CFO – Test Cases  
+**Version:** 1.0 🧪
