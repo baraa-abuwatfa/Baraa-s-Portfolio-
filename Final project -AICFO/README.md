@@ -228,8 +228,8 @@ AI-CFO/
 I'm always open to connecting, sharing ideas, and exploring opportunities in Software Engineering, Quality Assurance, AI, and Automation.
 
 - 💼 **LinkedIn:** [Connect with Me](https://www.linkedin.com/in/baraa-abuwatfa/))
-- 📧 **Email:** [Contact Me](abuwatfabaraa@gmail.com)
-- 🐙 **GitHub:** [Explore My Projects](https://github.com/baraa-abuwatfa)
+- 📧 **Email:** [Contact Me](abuwatfabaraa@gmail.com))
+- 🐙 **GitHub:** [Explore My Projects](https://github.com/baraa-abuwatfa))
 
 ---
 
