@@ -1,144 +1,259 @@
-# 📘 Final Project Report — AI CFO
+# 💼 AI CFO – AI-Powered Financial Management System
 
-## 1. Project Information
+> 🤖 Transforming financial data into intelligent business decisions.
+> - 🚀 **Live Website:** [AI CFO – Visit Website]((https://dual-language-finance-fluent.lovable.app/))
 
-| Item | Description |
+
+## 📌 1. Project Overview
+
+**AI CFO** is an AI-powered financial management system designed to help businesses and company owners understand their financial performance, monitor transactions, analyze expenses, and make better financial decisions.
+
+The system combines financial data management, interactive dashboards, AI-powered financial intelligence, and automated reporting concepts into one platform.
+
+🎯 **Main Goal:** Turn complex financial data into clear insights and actionable recommendations.
+
+---
+
+## ⚠️ 2. Problem & Target Users
+
+### 🔍 The Problem
+
+Many small and medium-sized businesses face challenges when managing their financial activities:
+
+- 📊 Difficulty understanding financial performance.
+- 💸 Limited visibility into expenses and spending patterns.
+- 🔎 Difficulty identifying unusual expenses.
+- 📑 Time-consuming financial reporting.
+- 🤔 Difficulty turning financial data into informed business decisions.
+
+### 👥 Target Users
+
+- 🏢 Small and medium-sized businesses.
+- 👔 Business owners and entrepreneurs.
+- 💼 Finance managers.
+- 📊 Administrative and financial teams.
+
+---
+
+## 💡 3. Proposed Solution & Key Features
+
+AI CFO provides a centralized platform for financial management and intelligent financial analysis.
+
+### ✨ Key Features
+
+| Feature | Description |
 |---|---|
-| Project Name | AI CFO |
-| Full Name | Intelligent Financial Management Platform |
-| Category | AI & Automation |
-| Prepared By | Baraa Mahmoud Abu Watfa |
-| Main Purpose | Financial analysis and decision support |
-| Project Status | Working prototype with implemented/configured monthly Telegram report workflow |
+| 🔐 Authentication | Secure user authentication and account access |
+| 🏢 Company Management | Manage company information and team access |
+| 💰 Transactions Management | Add, edit, delete, search, and filter income and expenses |
+| 📊 Financial Dashboard | Monitor revenue, expenses, net profit, and cash flow |
+| 🤖 Financial Intelligence | Analyze financial data and identify spending patterns |
+| 🚨 Unusual Expense Detection | Identify potentially unusual expenses |
+| 🧠 AI Recommendations | Generate financial insights and decision-support recommendations |
+| 📑 Financial Reports | Generate monthly and annual financial reports |
+| 📄 PDF Export | Export financial reports as PDF documents |
+| 👥 Role-Based Access | Manage access through different company roles |
+| 🌍 Bilingual Interface | Support Arabic (RTL) and English (LTR) |
 
-## 2. Executive Summary
+### 👤 User Roles
 
-AI CFO is a financial management platform for small businesses and company owners. It combines transaction management, dashboards, financial intelligence, monthly and annual reports, and an AI Financial Assistant. The project also includes a configured n8n Cloud workflow for sending an archived monthly report PDF through Telegram.
+- 👑 Owner
+- 🛡️ Admin
+- 💼 Finance Manager
+- 👁️ Viewer
 
-The application generates and archives the report PDF when a user exports a monthly report. n8n retrieves the archived PDF from private Supabase Storage and sends it through the Telegram Bot API; n8n does not generate the PDF. The workflow is implemented and configured, while end-to-end receipt of an actual PDF in Telegram remains pending verification.
+---
 
-## 3. Problem and Objectives
+## 🛠️ 4. Technology Stack
 
-Small businesses can have difficulty tracking income and expenses, understanding profitability, identifying unusual spending, and reviewing financial performance across periods. AI CFO aims to centralize records, present clear indicators, support analysis, and make reports easier to access.
+| Technology | Purpose |
+|---|---|
+| 🎨 Lovable | Application development and UI generation |
+| 🗄️ Supabase | Backend services and database management |
+| 🔐 Supabase Auth | User authentication |
+| 🛡️ Supabase RLS | Database access control and data protection |
+| ⚙️ n8n Cloud | Workflow automation integration (planned workflows) |
+| 🤖 AI Integration | Financial analysis and intelligent recommendations |
+| 📄 PDF Generation | Financial report export |
+| 🌐 GitHub | Project documentation and version control |
 
-Objectives:
+---
 
-1. Centralize company financial data.
-2. Simplify income and expense tracking.
-3. Present key financial indicators.
-4. Analyze trends and potential unusual expenses.
-5. Generate monthly and annual reports.
-6. Provide AI-assisted explanations and recommendations.
-7. Automate monthly report PDF delivery to a configured Telegram chat.
+## 🔄 5. How It Works
 
-## 4. Target Users
+AI CFO follows a financial data processing and analysis workflow.
 
-- Small business owners.
-- Entrepreneurs and startup founders.
-- Finance managers.
-- Administrative users responsible for financial records.
-
-## 5. Main Application Features
-
-### Authentication and Company Management
-
-User registration and login, company setup, membership management, and Owner, Admin, Finance Manager, and Viewer roles.
-
-### Financial Dashboard
-
-Revenue, expenses, net profit, cash flow, charts, and recent transactions.
-
-### Transaction Management
-
-Add, edit, delete, search, and filter income and expense records by relevant fields such as type, category, and date.
-
-### Financial Intelligence
-
-Revenue and expense trends, net profit analysis, period comparisons, category analysis, potentially unusual expenses, financial alerts, and AI-assisted recommendations. AI output is decision support and requires human review.
-
-### Financial Reports
-
-Monthly and annual summaries, revenue and expense totals, net profit, profit margin, charts, and PDF export. The application generates and archives the PDF when the user exports the report.
-
-## 6. Monthly Financial Report Telegram Automation
-
-### Workflow
+### 📊 System Workflow
 
 ```text
-Monthly Schedule (day 2, 09:00, Asia/Gaza) or Manual Test Trigger
-        ↓
-Load configuration
-        ↓
-Retrieve latest monthly report for configured company from report_files
-        ↓
-Report found?
-   No → handle missing report and stop
-   Yes
-        ↓
-Read storage_path and download archived PDF from private Supabase Storage
-        ↓
-Validate PDF binary
-        ↓
-Prepare professional Arabic Telegram notification
-        ↓
-Telegram Bot API — send document to configured Telegram Chat ID
+          👤 User
+             |
+             ▼
+       🔐 Authentication
+             |
+             ▼
+       🏢 Company Setup
+             |
+             ▼
+      💰 Financial Transactions
+             |
+             ▼
+       🗄️ Supabase Database
+             |
+       ┌─────┴─────┐
+       ▼           ▼
+  📊 Dashboard   🤖 AI Analysis
+       |           |
+       ▼           ▼
+  📈 Financial   🚨 Expense
+   Overview      Detection
+                   |
+                   ▼
+             🧠 AI Insights
+             & Recommendations
+                   |
+                   ▼
+             📑 Financial Reports
+                   |
+                   ▼
+               📄 PDF Export
 ```
 
-### Technical Configuration
+### ⚙️ Automation Workflows – Planned
 
-| Item | Configuration |
-|---|---|
-| Orchestration | n8n Cloud |
-| Schedule | Day 2 monthly at 09:00, `Asia/Gaza` timezone |
-| Manual execution | Manual Test Trigger |
-| Metadata source | Supabase `report_files` |
-| Object path field | `storage_path` |
-| Storage bucket | `financial-reports` (private) |
-| File | PDF generated and archived by the application during user export |
-| Delivery | Telegram Bot API document send to configured Telegram Chat ID |
-| Notification | Professional Arabic message |
+Two automation workflows are included in the project development scope:
 
-### Status and Verification
+**1. 📧 Monthly Financial Report**
 
-- The automation workflow is implemented and configured.
-- Successful PDF archival in Supabase has been reported.
-- Supabase report metadata retrieval was previously successful.
-- End-to-end Telegram delivery of an actual PDF is **pending verification**. This report does not claim a Telegram delivery success until the document is received in the configured chat.
+```text
+⏰ Schedule Trigger
+       ↓
+📊 Retrieve Financial Report
+       ↓
+📧 Send Email to Company Owner
+```
 
-## 7. Technology Stack
+**2. 🚨 Unusual Expense Alert**
 
-| Technology | Role |
-|---|---|
-| Lovable | Application interface development |
-| Supabase / PostgreSQL | Authentication, application data, report metadata, and storage |
-| AI integration | Financial analysis and natural-language decision support |
-| n8n Cloud | Scheduled/manual report retrieval and delivery orchestration |
-| Telegram Bot API | PDF document delivery |
+```text
+💰 Expense Trigger
+       ↓
+🔍 Check Unusual Expense
+       ↓
+📨 Notify Company Owner
+```
 
-## 8. Architecture and Data Protection
+*Note: These two n8n workflows are planned integrations and should not be considered completed or operational until implemented and tested.*
 
-The application uses a web interface, Supabase services, financial modules, and AI-assisted capabilities. The report automation reads metadata from `report_files`, uses `storage_path` to retrieve a PDF from the private `financial-reports` bucket, validates the binary, and sends the document through Telegram.
+---
 
-Credentials must be maintained in protected n8n credentials/configuration and never committed to the repository. Access to private storage and metadata should be least-privilege and company-scoped. Avoid exposing signed URLs, tokens, or sensitive financial data in logs or screenshots. See [System Architecture](../02_Technical_Solution/SYSTEM_ARCHITECTURE.md) and [Automation Documentation](../08_Automation/MONTHLY_REPORT_TELEGRAM_AUTOMATION.md).
+## 🚀 6. Setup or Access Instructions
 
-## 9. Testing and Quality Assurance
+### 🌐 Application Access
 
-The project records 60 functional scenarios across the application modules as passed, and separately reports 88 automated test executions (30 authentication/navigation and 58 invoice tests). These recorded results do not imply that the Telegram automation passed end-to-end testing.
+The application can be accessed through its deployed application link (when available).
 
-PDF archival has succeeded and Supabase metadata retrieval was previously successful. Actual PDF receipt in Telegram remains pending verification. The manual end-to-end procedure and unverified cases are documented in [Test Cases](../05-%20Testing/TEST_CASES.md) and [Testing Evidence](../05-%20Testing/TESTING_EVIDENCE.md).
+### 🧑‍💻 Development Requirements
 
-## 10. Limitations and Future Development
+To run or continue developing the project, the following services and configurations are required:
 
-- Telegram delivery requires end-to-end verification with an actual PDF in the configured chat.
-- A monthly PDF must first be generated and archived by the application; n8n does not create it.
-- AI insights depend on the quality and availability of financial data and need human review.
-- Production access policies, credential handling, operational monitoring, backup, and recovery should continue to be reviewed.
-- Additional development may improve analytics, reporting, testing, and production readiness.
+- Lovable project access.
+- Supabase project connection.
+- Required environment variables and credentials.
+- Configured AI integration.
+- n8n Cloud account for the planned automation workflows.
 
-The monthly report Telegram workflow is an existing configured project feature, not a future email/SMTP feature. Other possible future work must be distinguished from this workflow.
+### 📂 Repository Structure
 
-## 11. Conclusion
+```text
+AI-CFO/
+│
+├── 📄 README.md
+│
+├── 📁 01_Project_Definition/
+│   └── CLIENT_PROPOSAL.md
+│
+├── 📁 02_Technical_Solution/
+│   ├── WORKING_PROTOTYPE.md
+│   └── SYSTEM_ARCHITECTURE.md
+│
+├── 📁 03_Content/
+│
+├── 📁 04_Prompt_Engineering/
+│
+├── 📁 05_Testing/
+│   └── TEST_CASES.md
+│
+├── 📁 06_Documentation/
+│
+├── 📁 07_Demonstration/
+│
+└── 📁 08_Presentation/
+```
 
-AI CFO brings financial management and AI-assisted analysis together with an n8n Cloud workflow designed to retrieve and deliver archived monthly PDF reports through Telegram. The workflow configuration is in place; final Telegram delivery remains unverified until the actual PDF is received and inspected in the configured chat.
+---
 
-**AI CFO — Turning Financial Data into Intelligent Decisions.**
+## 🔗 7. Demo Link
+
+🌐 **Live Application:** [Add Application URL]
+
+📂 **GitHub Repository:** [Add Repository URL]
+
+🎥 **Project Demonstration:** [Add Demo Video Link]
+
+---
+
+## ⚠️ 8. Known Limitations & Future Improvements
+
+### Current Limitations
+
+- 🤖 AI recommendations depend on the quality and completeness of available financial data.
+- 📊 Financial insights are intended to support business decisions, not replace professional financial advice.
+- ⚙️ The two planned n8n automation workflows require implementation and integration testing.
+- 🔌 Application functionality depends on the availability of connected backend and AI services.
+
+### 🚀 Future Improvements
+
+- 📧 Complete and activate monthly financial report automation.
+- 🚨 Implement unusual expense notification automation.
+- 🧠 Improve AI financial analysis and recommendation quality.
+- 📈 Expand financial analytics and reporting capabilities.
+- 🔐 Enhance company-level access management and security.
+- 📊 Expand financial performance insights.
+
+---
+---
+
+## 🌐 9. Project Links
+
+- 🚀 **Live Website:** [AI CFO – Visit Website]((https://dual-language-finance-fluent.lovable.app/))
+- 📂 **GitHub Repository:** [View Source Code](https://github.com/baraa-abuwatfa/dual-language-finance-fluent.gitADD_GITHUB_REPOSITORY_URL)
+
+---
+
+## 👩‍💻 10. Connect With Me
+
+I'm always open to connecting, sharing ideas, and exploring opportunities in Software Engineering, Quality Assurance, AI, and Automation.
+
+- 💼 **LinkedIn:** [Connect with Me](https://www.linkedin.com/in/baraa-abuwatfa/))
+- 📧 **Email:** [Contact Me](abuwatfabaraa@gmail.com)
+- 🐙 **GitHub:** [Explore My Projects](https://github.com/baraa-abuwatfa)
+
+---
+
+
+## 🎯 Project Goal
+
+AI CFO aims to make financial management smarter, simpler, and more accessible by combining financial data analysis, artificial intelligence, and automation.
+
+**💡 From Financial Data to Smarter Decisions.**
+
+---
+
+### 👩‍💻 Author
+
+**Baraa Mahmoud Abu Watfa**
+
+Software Engineer | QA | AI & Automation
+
+
