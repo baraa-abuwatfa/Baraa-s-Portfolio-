@@ -1,4 +1,4 @@
-🌐 اللغة: "English" (README.md) | العربية
+
 # 💼 AI CFO – AI-Powered Financial Management System
 
 > 🤖 Transforming financial data into intelligent business decisions.
