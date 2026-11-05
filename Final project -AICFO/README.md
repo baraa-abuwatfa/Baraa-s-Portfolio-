@@ -228,6 +228,7 @@ AI-CFO/
 
 - 🚀 **Live Website:** [AI CFO – Visit Website]((https://dual-language-finance-fluent.lovable.app/))
 - 📂 **GitHub Repository:** [View Source Code](https://github.com/baraa-abuwatfa/dual-language-finance-fluent.gitADD_GITHUB_REPOSITORY_URL)
+- 🚀 **Live Demo:** [AI CFO –Live Demo](https://drive.google.com/file/d/1yE5fIOXYoGcjb_5Fs9kP2XPVBotTVW2C/view?usp=sharing)
 
 ---
 
