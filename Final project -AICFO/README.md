@@ -193,17 +193,8 @@ AI-CFO/
 
 ---
 
-## 🔗 7. Demo Link
 
-🌐 **Live Application:** [Add Application URL]
-
-📂 **GitHub Repository:** [Add Repository URL]
-
-🎥 **Project Demonstration:** [Add Demo Video Link]
-
----
-
-## ⚠️ 8. Known Limitations & Future Improvements
+## ⚠️ 7. Known Limitations & Future Improvements
 
 ### Current Limitations
 
@@ -224,7 +215,7 @@ AI-CFO/
 ---
 ---
 
-## 🌐 9. Project Links
+## 🌐 8. Project Links
 
 - 🚀 **Live Website:** [AI CFO – Visit Website]((https://dual-language-finance-fluent.lovable.app/))
 - 📂 **GitHub Repository:** [View Source Code](https://github.com/baraa-abuwatfa/dual-language-finance-fluent.gitADD_GITHUB_REPOSITORY_URL)
@@ -232,7 +223,7 @@ AI-CFO/
 
 ---
 
-## 👩‍💻 10. Connect With Me
+## 👩‍💻 9. Connect With Me
 
 I'm always open to connecting, sharing ideas, and exploring opportunities in Software Engineering, Quality Assurance, AI, and Automation.
 
